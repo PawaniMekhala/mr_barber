@@ -50,10 +50,10 @@ const Navbar = () => {
     return (
       <div>
         {/* upper Navbar */}
-        <nav className="bg-black text-yellow-700 p-6">
+        <nav className="bg-black text-yellow-500 p-6">
             <div className="container mx-auto flex justify-between items-center">
                 {/* <img src={Logo} alt="Mr Barber" className="" /> */}
-                <div className="text-4xl font-bold mervale-font self-center whitespace-nowrap text-yellow-700">
+                <div className="text-4xl font-bold mervale-font self-center whitespace-nowrap text-yellow-500">
                     Mr Barber
                 </div>
                 <div className="flex space-x-6 text-white">
@@ -82,10 +82,10 @@ const Navbar = () => {
         <nav className="bg-black text-yellow-500 p-8">
             <div className="container mx-auto flex justify-between items-center">
             <div className="absolute top-20 right-0 mt-2 mr-4 flex space-x-4">
-                <button className="bg-yellow-600 text-black px-4 py-1 rounded-md hover:bg-yellow-700 shadow-md ">
+                <button className="bg-yellow-600 text-black px-4 py-1 rounded-md hover:bg-yellow-700 shadow-lg shadow-yellow-700/10 ">
                     Appointment
                 </button>
-                <button data-ripple-light="true" className="bg-yellow-500 text-black px-4 py-1 rounded-md hover:bg-yellow-700 shadow-md">
+                <button data-ripple-light="true" className="bg-yellow-600 text-black px-4 py-1 rounded-md hover:bg-yellow-700 shadow-lg shadow-yellow-700/10">
                     Staff
                 </button>
             </div>
