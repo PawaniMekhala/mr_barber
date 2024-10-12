@@ -53,7 +53,7 @@ const Navbar = () => {
         <nav className="bg-black text-yellow-500 p-6">
             <div className="container mx-auto flex justify-between items-center">
                 {/* <img src={Logo} alt="Mr Barber" className="" /> */}
-                <div className="text-4xl font-bold mervale-font self-center whitespace-nowrap text-yellow-500">
+                <div className="text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-500">
                     Mr Barber
                 </div>
                 <div className="flex space-x-6 text-white">
@@ -94,6 +94,9 @@ const Navbar = () => {
 
         {/* Bottom Border */}
       <div className="h-1 bg-yellow-600"></div>
+
+      {/* footer  */}
+      <div className=""></div>
       </div>
     );
   };
