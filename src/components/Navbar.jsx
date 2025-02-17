@@ -1,106 +1,76 @@
-import React from 'react';
-import '../fonts/MervaleScript-Regular.otf';
-// import Logo from '../assets/logo.png';
-
-
-// const Navbar = () => {
-//   return (
-//     <div>
-//       {/* Navbar */}
-      
-//       {/* D:\Projects\Mr Barber\mr-barber\src\assets\logo.png
-//       D:\Projects\Mr Barber\mr-barber\src\components\Navbar.jsx */}
-// <nav className="bg-white border-gray-200 dark:bg-gray-900">
-//     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-//         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-//             <img src={Logo} className="h-8" alt="Mr Barber Logo" />
-//             <span className="text-3xl font-bold mervale-font self-center whitespace-nowrap text-yellow-600">Mr Barber</span>
-//         </a>
-//         <div className="flex items-center space-x-6 rtl:space-x-reverse">
-//             <a href="tel:5541251234" className="text-sm  text-gray-500 dark:text-white hover:underline">(555) 412-1234</a>
-//             <a href="/login" className="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
-//         </div>
-//     </div>
-// </nav>
-// <nav className="bg-gray-50 dark:bg-gray-700">
-//     <div className="max-w-screen-xl px-4 py-3 mx-auto">
-//         <div className="flex items-center">
-//             <ul className="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
-//                 <li>
-//                     <a href="/home" className="text-gray-900 dark:text-white hover:underline" aria-current="page">Home</a>
-//                 </li>
-//                 <li>
-//                     <a href="/company" className="text-gray-900 dark:text-white hover:underline">Company</a>
-//                 </li>
-//                 <li>
-//                     <a href="/team" className="text-gray-900 dark:text-white hover:underline">Team</a>
-//                 </li>
-//                 <li>
-//                     <a href="/features" className="text-gray-900 dark:text-white hover:underline">Features</a>
-//                 </li>
-//             </ul>
-//         </div>
-//     </div>
-// </nav>
-//     </div>
-//   );
-// };
-
+import React, { useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Logo from "../assets/logo.png";
 const Navbar = () => {
-    return (
-      <div>
-        {/* upper Navbar */}
-        <nav className="bg-black text-yellow-500 p-6">
-            <div className="container mx-auto flex justify-between items-center">
-                {/* <img src={Logo} alt="Mr Barber" className="" /> */}
-                <div className="text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-500">
-                    Mr Barber
-                </div>
-                <div className="flex space-x-6 text-white">
-                    <ul className="flex">
-                        <li className="mr-6">
-                            <a href="/" className="hover:text-yellow-400">Home</a>
-                        </li>
-                        <li className="mr-6">
-                            <a href="/about-us" className="hover:text-yellow-400">About Us</a>
-                        </li>
-                        <li className="mr-6">
-                            <a href="services" className="hover:text-yellow-400">Services</a>
-                        </li>
-                        <li className="mr-6">
-                            <a href="pricing" className="hover:text-yellow-400">Pricing</a>
-                        </li>
-                        <li className="mr-6">
-                            <a href="reviews" className="hover:text-yellow-400">Reviews</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+  // State to manage the navbar's visibility
+  const [nav, setNav] = useState(false);
 
-        {/* bottom navbar */}
-        <nav className="bg-black text-yellow-500 p-8">
-            <div className="container mx-auto flex justify-between items-center">
-            <div className="absolute top-20 right-0 mt-2 mr-4 flex space-x-4">
-                <button className="bg-yellow-600 text-black px-4 py-1 rounded-md hover:bg-yellow-700 shadow-lg shadow-yellow-700/10 ">
-                    Appointment
-                </button>
-                <button data-ripple-light="true" className="bg-yellow-600 text-black px-4 py-1 rounded-md hover:bg-yellow-700 shadow-lg shadow-yellow-700/10">
-                    Staff
-                </button>
-            </div>
-            </div>
-        </nav>
-
-        {/* Bottom Border */}
-      <div className="h-1 bg-yellow-600"></div>
-
-      {/* footer  */}
-      <div className=""></div>
-      </div>
-    );
+  // Toggle function to handle the navbar's display
+  const handleNav = () => {
+    setNav(!nav);
   };
-  
+
+  // Array containing navigation items
+  const navItems = [
+    { id: 1, text: "Home" },
+    { id: 2, text: "About Us" },
+    { id: 3, text: "Services" },
+    { id: 4, text: "Pricing" },
+    { id: 5, text: "Reviews" },
+  ];
+
+  return (
+    <div className="bg-black flex justify-between items-center h-24 max-w-[3000px] mx-auto px-4 text-white">
+      {/* Logo */}
+      <h1 className="w-full text-3xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-500">
+        Mr. Barber
+      </h1>
+
+      {/* Desktop Navigation */}
+      <ul className="hidden md:flex">
+        {navItems.map((item) => (
+          <li
+            key={item.id}
+            className="py-2 px-6 hover:bg-[#876806] rounded-xl m-2 cursor-pointer duration-300 hover:text-black text-left whitespace-nowrap"
+          >
+            {item.text}
+          </li>
+        ))}
+      </ul>
+
+      {/* Mobile Navigation Icon */}
+      <div onClick={handleNav} className="block md:hidden" role="button" aria-label="Toggle navigation">
+        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      <ul 
+      className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] transition-transform duration-500 ${
+        nav ? "translate-x-0" : "-translate-x-full"
+      }`}
+        
+      >
+        {/* Mobile Logo */}
+        <div className="flex justify-center items-center py-4">
+          <img
+            src={Logo}
+            alt="Mr. Barber Logo"
+            className="w-24 h-24 object-contain"
+          />
+        </div>
+
+        {/* Mobile Navigation Items */}
+        {navItems.map((item) => (
+          <li
+            key={item.id}
+            className="py-2 px-6 border-b rounded-xl hover:bg-[#876806] duration-300 hover:text-black cursor-pointer border-gray-600"
+          >
+            {item.text}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 export default Navbar;
-
