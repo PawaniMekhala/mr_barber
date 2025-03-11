@@ -73,6 +73,7 @@ const Footer = () => {
             <li className="hover:text-yellow-500 cursor-pointer">Weddings</li>
           </ul>
         </div>
+
         {/* Contact Section */}
         <div>
           <h3 className="text-xl font-semibold text-yellow-700 mb-4">
@@ -91,6 +92,11 @@ const Footer = () => {
             <MdEmail /> mrbarbershop@gmail.com
           </p>
         </div>
+      </div>
+
+      {/* Copyright */}
+      <div className="text-center text-gray-500 text-sm mt-10 border-t pt-4">
+        Copyright {new Date().getFullYear()}, Mr. Barber. All rights reserved.
       </div>
     </footer>
   );
