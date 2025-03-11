@@ -51,6 +51,28 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
+        {/* Quick Links Section */}
+        <div>
+          <h3 className="text-xl font-semibold text-yellow-700 mb-4">
+            Quick Links
+          </h3>
+          <ul className="text-gray-600 space-y-2">
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Hair Cutting
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Shaving & Styling
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Hair Treatments
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Facial Treatments
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">Weddings</li>
+          </ul>
+        </div>
       </div>
     </footer>
   );
