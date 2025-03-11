@@ -73,6 +73,24 @@ const Footer = () => {
             <li className="hover:text-yellow-500 cursor-pointer">Weddings</li>
           </ul>
         </div>
+        {/* Contact Section */}
+        <div>
+          <h3 className="text-xl font-semibold text-yellow-700 mb-4">
+            Contact
+          </h3>
+          <p className="text-gray-600 flex items-center gap-2">
+            <FaMapMarkerAlt /> Colombo 03, Sri Lanka
+          </p>
+          <p className="text-gray-600 flex items-center gap-2">
+            <FaPhoneAlt /> +94 789417345
+          </p>
+          <p className="text-gray-600 flex items-center gap-2">
+            <FaRegClock /> Sun - Fri: 08 am - 09 pm
+          </p>
+          <p className="text-gray-600 flex items-center gap-2">
+            <MdEmail /> mrbarbershop@gmail.com
+          </p>
+        </div>
       </div>
     </footer>
   );
