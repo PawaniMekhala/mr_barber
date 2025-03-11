@@ -28,6 +28,18 @@ const Navbar = () => {
         <h1 className="w-full text-5xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-200">
           Mr. Barber
         </h1>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex">
+          {navItems.map((item) => (
+            <li
+              key={item.id}
+              className="py-2 px-6 hover:bg-yellow-600 rounded-xl m-2 cursor-pointer duration-300 hover:text-black text-left whitespace-nowrap"
+            >
+              {item.text}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
