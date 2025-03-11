@@ -50,6 +50,32 @@ const Navbar = () => {
         >
           {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
         </div>
+
+        {/* Mobile Navigation Menu */}
+        <ul
+          className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] transition-transform duration-500 ${
+            nav ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          {/* Mobile Logo */}
+          <div className="flex justify-center items-center py-4">
+            <img
+              src={Logo}
+              alt="Mr. Barber Logo"
+              className="w-30 h-30 object-contain"
+            />
+          </div>
+
+          {/* Mobile Navigation Items */}
+          {navItems.map((item) => (
+            <li
+              key={item.id}
+              className="py-2 px-6 border-b rounded-xl hover:bg-[#876806] duration-300 hover:text-black cursor-pointer border-gray-600"
+            >
+              {item.text}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
