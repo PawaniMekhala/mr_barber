@@ -40,6 +40,16 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        {/* Mobile Navigation Icon */}
+        <div
+          onClick={handleNav}
+          className="block md:hidden"
+          role="button"
+          aria-label="Toggle navigation"
+        >
+          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </div>
       </div>
     </div>
   );
