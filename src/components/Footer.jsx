@@ -27,6 +27,30 @@ const Footer = () => {
             <AiOutlineTwitter className="text-blue-400" />
           </div>
         </div>
+
+        {/* Discover Section */}
+        <div>
+          <h3 className="text-xl font-semibold text-yellow-700 mb-4">
+            Discover
+          </h3>
+          <ul className="text-gray-600 space-y-2">
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Our Services
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Meet Our Team
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Make an Appointment
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              Need a Career?
+            </li>
+            <li className="hover:text-yellow-500 cursor-pointer">
+              News & Blogs
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   );
