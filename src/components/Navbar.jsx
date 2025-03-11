@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Logo from "../assets/logo.png";
+
 const Navbar = () => {
   // State to manage the navbar's visibility
   const [nav, setNav] = useState(false);
@@ -20,55 +21,14 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="bg-black flex justify-between items-center h-24 max-w-[3000px] mx-auto px-4 text-white">
-      {/* Logo */}
-      <h1 className="w-full text-3xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-500">
-        Mr. Barber
-      </h1>
-
-      {/* Desktop Navigation */}
-      <ul className="hidden md:flex">
-        {navItems.map((item) => (
-          <li
-            key={item.id}
-            className="py-2 px-6 hover:bg-[#876806] rounded-xl m-2 cursor-pointer duration-300 hover:text-black text-left whitespace-nowrap"
-          >
-            {item.text}
-          </li>
-        ))}
-      </ul>
-
-      {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className="block md:hidden" role="button" aria-label="Toggle navigation">
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+    <div>
+      {/* Top Navbar */}
+      <div className="bg-black flex justify-between items-center h-24 max-w-[3000px] mx-auto px-4 text-white">
+        {/* Logo */}
+        <h1 className="w-full text-5xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-200">
+          Mr. Barber
+        </h1>
       </div>
-
-      {/* Mobile Navigation Menu */}
-      <ul 
-      className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] transition-transform duration-500 ${
-        nav ? "translate-x-0" : "-translate-x-full"
-      }`}
-        
-      >
-        {/* Mobile Logo */}
-        <div className="flex justify-center items-center py-4">
-          <img
-            src={Logo}
-            alt="Mr. Barber Logo"
-            className="w-24 h-24 object-contain"
-          />
-        </div>
-
-        {/* Mobile Navigation Items */}
-        {navItems.map((item) => (
-          <li
-            key={item.id}
-            className="py-2 px-6 border-b rounded-xl hover:bg-[#876806] duration-300 hover:text-black cursor-pointer border-gray-600"
-          >
-            {item.text}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };
