@@ -87,9 +87,7 @@ const Navbar = () => {
         </button>
       </div>
       {/* Yellow Line */}
-      <div className="w-full h-[3px] bg-yellow-500">
-        {/* <div className="bg-gray-900 flex justify-end items-center h-16 px-4 text-white border-b-4 border-yellow-500"> */}
-      </div>
+      <div className="w-full h-[1px] bg-yellow-500"></div>
     </div>
   );
 };
