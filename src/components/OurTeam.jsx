@@ -12,13 +12,14 @@ const OurTeam = () => {
     { name: "Yasmine Tano", image: Staff2, position: "Chairman" },
     { name: "Martin Darbys", image: Staff3, position: "CEO" },
     { name: "Patrick Angely", image: Staff4, position: "Product Manager" },
+    { name: "Jerom Bell", image: Staff1, position: "Co-Founder" },
   ];
   return (
     <div className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Text  */}
         <div className="mb-12">
-          <h2 className="text-7xl text-center font-semibold text-yellow-700 ">
+          <h2 className="text-7xl font-semibold text-yellow-700 ">
             Our team...{" "}
           </h2>
         </div>
