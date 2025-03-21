@@ -87,6 +87,18 @@ const Review = () => {
             </div>
           ))}
         </div>
+
+        {/* Navigation & Button */}
+        <div className="flex justify-center items-center mt-6">
+          <MdChevronLeft className="text-3xl text-gray-600 cursor-pointer" />
+          <MdChevronRight className="text-3xl text-gray-600 cursor-pointer ml-4" />
+        </div>
+
+        <div className="flex justify-center mt-6">
+          <button className="bg-[#B5913E] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#9c7a30]">
+            Give Feedback
+          </button>
+        </div>
       </div>
     </div>
   );
