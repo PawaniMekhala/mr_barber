@@ -5,6 +5,9 @@ import AboutUs from "./components/AboutUs";
 import OurTeam from "./components/OurTeam";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
+import Pricing from "./components/Pricing";
+import Test from "./components/Test";
+import Review from "./components/Review";
 
 
 function App() {
@@ -15,7 +18,10 @@ function App() {
       <AboutUs/>
       <OurTeam/>
       <Services/>
+      <Pricing/>
       <Gallery/>
+      <Review/>
+      <Test/>
       <Footer />
     </div>
   );
