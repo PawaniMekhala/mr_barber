@@ -79,15 +79,15 @@ const Navbar = () => {
       </div>
       {/* Bottom Navbar */}
       <div className="bg-black flex justify-end items-center h-16 px-4 text-white">
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-xl m-2">
+        <button className="bg-yellow-700 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-xl m-2">
           Appointment
         </button>
-        <button className="bg-transparent border border-yellow-500 hover:bg-yellow-500 text-yellow-500 hover:text-black font-bold py-2 px-6 rounded-xl m-2">
+        <button className="bg-transparent border border-yellow-700 hover:bg-yellow-700 text-yellow-700 hover:text-black font-bold py-2 px-6 rounded-xl m-2">
           Staff
         </button>
       </div>
       {/* Yellow Line */}
-      <div className="w-full h-[1px] bg-yellow-500"></div>
+      <div className="w-full h-[1px] bg-yellow-700"></div>
     </div>
   );
 };
