@@ -12,7 +12,7 @@ const AboutUs = () => {
                 <h1 className="text-7xl font-semibold font-playfair text-yellow-700 leading-normal lg:text-start text-center">
                   About Us...
                 </h1>
-                <p className="text-gray-800 text-base font-normal leading-relaxed lg:text-start text-center">
+                <p className="text-gray-800 text-base font-normal font-poppins leading-relaxed lg:text-start text-center">
                   Welcome to Mr. Barber, a premium barbershop located in the
                   heart of Colombo 3. Our skilled barbers combine timeless
                   craftsmanship with modern trends to deliver exceptional
