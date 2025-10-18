@@ -5,11 +5,11 @@ import Home3 from "../assets/home_img/home3.jpg";
 
 const Home = () => {
   return (
-    <div className="relative bg-black text-white min-h-screen flex flex-col px-4 sm:px-10 py-16 overflow-hidden">
+    <div className="relative bg-neutral-900 text-white min-h-screen flex flex-col px-4 sm:px-10 py-16 overflow-hidden">
       {/* Text Section */}
       <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto items-center">
         <div className=" flex flex-col justify-center text-center lg:text-left">
-          {/* Main Text */}
+          {/* Main Text, drop-shadow-md */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-yellow-700 leading-tight">
             Find The Best <br /> Style For You...
           </h1>
