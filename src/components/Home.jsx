@@ -14,7 +14,7 @@ const Home = () => {
             Find The Best <br /> Style For You...
           </h1>
           {/* button */}
-          <button className="bg-yellow-700 text-black px-6 py-3 rounded-lg text-lg font-semibold mt-6 hover:bg-yellow-600 transition">
+          <button className="bg-yellow-700 text-black px-6 py-3 rounded-lg text-lg font-semibold font-poppins mt-6 hover:bg-yellow-600 transition">
             Get Started
           </button>
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
       {/* Contact Section */}
       <div className="mt-20 w-full max-w-4xl mx-auto px-4">
         <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 mb-4 text-center sm:text-left">
-          <span className="text-yellow-700 text-lg font-medium">
+          <span className="text-yellow-700 text-lg font-poppins font-medium">
             📞 Call Us : +94 782637487
           </span>
         </div>
