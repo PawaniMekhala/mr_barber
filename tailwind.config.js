@@ -4,7 +4,11 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   // darkMode: 'media', // or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        playfair: ['"Playfair Display"', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
