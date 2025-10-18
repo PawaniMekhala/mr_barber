@@ -21,7 +21,7 @@ const Services = () => {
     <div className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Services heading */}
-        <h2 className="text-7xl font-semibold text-yellow-700 mb-14">
+        <h2 className="text-7xl font-semibold font-playfair text-yellow-700 mb-14">
           Our Services...
         </h2>
         <div className="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
