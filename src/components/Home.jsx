@@ -10,11 +10,11 @@ const Home = () => {
       <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto items-center">
         <div className=" flex flex-col justify-center text-center lg:text-left">
           {/* Main Text */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-500 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-700 leading-tight">
             Find The Best <br /> Style For You...
           </h1>
           {/* button */}
-          <button className="bg-yellow-500 text-black px-6 py-3 rounded-lg text-lg font-semibold mt-6 hover:bg-yellow-600 transition">
+          <button className="bg-yellow-700 text-black px-6 py-3 rounded-lg text-lg font-semibold mt-6 hover:bg-yellow-600 transition">
             Get Started
           </button>
         </div>
@@ -22,7 +22,7 @@ const Home = () => {
         {/*  Image Section*/}
         <div className="flex justify-center relative mt-10 lg:mt-0 lg:ml-auto w-full lg:w-auto">
           {/* Main Image */}
-          <div className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[250px] sm:h-[300px] md:h-[350px] overflow-hidden rounded-full border-2 border-yellow-500">
+          <div className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[250px] sm:h-[300px] md:h-[350px] overflow-hidden rounded-full border-2 border-yellow-700">
             <img
               src={Home1}
               alt="Haircut"
@@ -35,7 +35,7 @@ const Home = () => {
             <img
               src={Home2}
               alt="Side Haircut"
-              className="rounded-full border-1 border-yellow-500 object-cover"
+              className="rounded-full border-1 border-yellow-700 object-cover"
             />
           </div>
 
@@ -44,7 +44,7 @@ const Home = () => {
             <img
               src={Home3}
               alt="Beard Trim"
-              className="rounded-full border-1 border-yellow-500 object-cover"
+              className="rounded-full border-1 border-yellow-700 object-cover"
             />
           </div>
         </div>
@@ -53,12 +53,12 @@ const Home = () => {
       {/* Contact Section */}
       <div className="mt-20 w-full max-w-4xl mx-auto px-4">
         <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 mb-4 text-center sm:text-left">
-          <span className="text-yellow-500 text-lg font-medium">
+          <span className="text-yellow-700 text-lg font-medium">
             📞 Call Us : +94 782637487
           </span>
         </div>
         <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-          <span className="text-yellow-500 text-lg font-medium">
+          <span className="text-yellow-700 text-lg font-medium">
             🕒 Opening Hours: Sunday - Friday, 08 a.m - 09 p.m
           </span>
         </div>
