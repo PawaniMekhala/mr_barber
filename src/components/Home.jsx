@@ -10,7 +10,7 @@ const Home = () => {
       <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto items-center">
         <div className=" flex flex-col justify-center text-center lg:text-left">
           {/* Main Text */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-700 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-yellow-700 leading-tight">
             Find The Best <br /> Style For You...
           </h1>
           {/* button */}
