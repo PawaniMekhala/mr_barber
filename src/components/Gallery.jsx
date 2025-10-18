@@ -22,7 +22,7 @@ const Gallery = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Text  */}
         <div className="mb-12">
-          <h2 className="text-7xl font-semibold text-yellow-700 ">
+          <h2 className="text-7xl font-semibold font-playfair text-yellow-700 ">
             Gallery...{" "}
           </h2>
         </div>
