@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div>
       {/* Top Navbar */}
-      <div className="bg-black flex justify-between items-center h-24 max-w-[3000px] mx-auto px-4 text-white">
+      <div className="bg-neutral-900 flex justify-between items-center h-24 max-w-[3000px] mx-auto px-4 text-white">
         {/* Logo */}
         <h1 className="w-full text-5xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-200">
           Mr. Barber
@@ -78,7 +78,7 @@ const Navbar = () => {
         </ul>
       </div>
       {/* Bottom Navbar */}
-      <div className="bg-black flex justify-end items-center h-16 px-4 text-white">
+      <div className="bg-neutral-900 flex justify-end items-center h-16 px-4 text-white">
         <button className="bg-yellow-700 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-xl m-2">
           Appointment
         </button>
