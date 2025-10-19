@@ -10,9 +10,13 @@ const Home = () => {
       <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto items-center">
         <div className=" flex flex-col justify-center text-center lg:text-left">
           {/* Main Text, drop-shadow-md */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold text-yellow-700 leading-tight">
+          {/* <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-semibold text-yellow-700 leading-tight text-shadow">
+            Find The Best <br /> Style For You...
+          </h1> */}
+          <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#8B6A00] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
             Find The Best <br /> Style For You...
           </h1>
+
           {/* button */}
           <button className="bg-yellow-700 text-black px-6 py-3 rounded-lg text-lg font-semibold font-poppins mt-6 hover:bg-yellow-600 transition">
             Get Started
