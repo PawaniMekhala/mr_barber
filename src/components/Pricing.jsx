@@ -11,7 +11,7 @@ const Pricing = () => {
     {
       name: "Hair Cutting",
       price: "850/=",
-      image: Service2, // Replace with actual image URL
+      image: Service2,
     },
     {
       name: "Hair Treatments",
