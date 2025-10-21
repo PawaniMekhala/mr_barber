@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-10 border-t">
+    <footer className="bg-white font-poppins py-10 border-t">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* About Section */}
         <div>
