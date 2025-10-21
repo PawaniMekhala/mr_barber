@@ -66,7 +66,7 @@ const Review = () => {
         </h2>
 
         {/* review card section */}
-        <div className="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3  no-scrollbar">
+        <div className="mx-auto font-poppins mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3  no-scrollbar">
           {reviews.map((review) => (
             <div
               key={review.id}
