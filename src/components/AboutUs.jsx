@@ -31,7 +31,7 @@ const AboutUs = () => {
                 src={Owner}
                 alt="about Us"
               />
-              <div className="mt-2 font-normal text-sm text-gray-600">
+              <div className="mt-2 font-normal text-sm font-poppins text-gray-600">
                 "To be the go-to destination for timeless grooming excellence."
                 <br />
                 Owner-Mr. T.B.Perera
