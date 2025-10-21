@@ -48,7 +48,7 @@ const Pricing = () => {
         </h2>
         {/* button group */}
         {/* price menu */}
-        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 gap-8">
+        <div className="max-w-7xl mx-auto font-poppins grid grid-cols-2 sm:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
