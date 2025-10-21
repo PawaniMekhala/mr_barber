@@ -24,8 +24,8 @@ const Home = () => {
         </div>
 
         {/*  Image Section*/}
-        <div className="flex justify-center relative mt-10 lg:mt-0 lg:ml-auto w-full lg:w-auto">
-          {/* Main Image */}
+        {/* <div className="flex justify-center relative mt-10 lg:mt-0 lg:ml-auto w-full lg:w-auto">
+          {/* Main Image 
           <div className="relative w-[250px] sm:w-[300px] md:w-[350px] h-[250px] sm:h-[300px] md:h-[350px] overflow-hidden rounded-full border-2 border-yellow-700">
             <img
               src={Home1}
@@ -34,7 +34,7 @@ const Home = () => {
             />
           </div>
 
-          {/* Small Top Right Image */}
+          {/* Small Top Right Image 
           <div className="absolute top-0 right-[10px] sm:right-[20px] lg:right-[2px] w-16 sm:w-20 h-16 sm:h-20 ">
             <img
               src={Home2}
@@ -43,12 +43,46 @@ const Home = () => {
             />
           </div>
 
-          {/* Small Bottom Left Image */}
+          {/* Small Bottom Left Image 
           <div className="absolute bottom-[-40px] sm:bottom-[-60px] right-[10px] sm:right-[20px] lg:right-[10px] w-20 h-20 sm:w-28 sm:h-28">
             <img
               src={Home3}
               alt="Beard Trim"
               className="rounded-full border-1 border-yellow-700 object-cover"
+            />
+          </div>
+        </div> */}
+
+        {/* Image Section */}
+        <div className="relative flex justify-center mt-10 lg:mt-0 lg:ml-auto w-full lg:w-auto">
+          {/* Main Image */}
+          <div className="relative w-[350px] h-[350px] sm:w-[380px] sm:h-[380px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden">
+            <img
+              src={Home1}
+              alt="Haircut"
+              className="w-full h-full object-cover rounded-full"
+            />
+            {/* 3/4 Golden Ring */}
+            <div className="absolute inset-0 rounded-full border-[3px] border-[#8B6A00] border-t-transparent border-l-transparent rotate-[90deg] shadow-[0_0_15px_rgba(139,106,0,0.5)]"></div>
+          </div>
+
+          {/* Small Top Right Image */}
+          <div className="absolute top-[40px] right-[150px] sm:top-[10px] sm:right-[-250px] md:right-[-200px] w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] rounded-full overflow-hidden">
+            <img
+              src={Home2}
+              alt="Side Haircut"
+              className="w-full h-full object-cover rounded-full"
+            />
+            {/* Partial Golden Ring */}
+            <div className="absolute inset-0 rounded-full border-[3px] border-[#8B6A00] border-t-transparent border-l-transparent rotate-[90deg]"></div>
+          </div>
+
+          {/* Small Bottom Left Image */}
+          <div className="absolute bottom-[-50px] right-[20px] sm:bottom-[-70px] sm:right-[30px] w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full overflow-hidden border-[2px] border-[#8B6A00] shadow-[0_8px_15px_rgba(0,0,0,0.25)]">
+            <img
+              src={Home3}
+              alt="Beard Trim"
+              className="w-full h-full object-cover rounded-full"
             />
           </div>
         </div>
