@@ -5,147 +5,143 @@ import Home3 from "../assets/home_img/home3.jpg";
 
 const Home = () => {
   return (
-    <div className="relative bg-neutral-900 text-white min-h-screen flex flex-col px-4 sm:px-10 py-16 overflow-hidden">
-      {/* Inline keyframes so no extra config is required */}
+    <section className="relative bg-neutral-900 text-white min-h-screen flex flex-col px-4 sm:px-10 py-16 overflow-hidden">
+      {/* Animations & reduced-motion support */}
       <style>{`
         @keyframes float-main {
           0% { transform: translateY(0) rotate(0deg); }
           50% { transform: translateY(-8px) rotate(1.2deg); }
           100% { transform: translateY(0) rotate(0deg); }
         }
-        @keyframes float-small1 {
+        @keyframes float-small {
           0% { transform: translateY(0) scale(1); }
           50% { transform: translateY(-6px) scale(1.01); }
           100% { transform: translateY(0) scale(1); }
         }
-        @keyframes float-small2 {
-          0% { transform: translateY(0) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(-1deg); }
-          100% { transform: translateY(0) rotate(0deg); }
-        }
-
         .float-main { animation: float-main 4s ease-in-out infinite; transform-origin: center; }
-        .float-small1 { animation: float-small1 3.6s ease-in-out infinite; transform-origin: center; }
-        .float-small2 { animation: float-small2 5s ease-in-out infinite; transform-origin: center; }
-
-        /* small help for smoothing edges on the rings */
+        .float-small { animation: float-small 3.8s ease-in-out infinite; transform-origin: center; }
+        @media (prefers-reduced-motion: reduce) {
+          .float-main, .float-small { animation: none !important; }
+        }
         .ring-blend { box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
       `}</style>
 
-      {/* Text Section */}
-      <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto items-center">
-        <div className="flex-1 flex flex-col justify-center text-center lg:text-left">
-          <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#C9A915] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
-            Find The Best <br /> Style For You...
-          </h1>
+      {/* Content wrapper */}
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          {/* LEFT: Text */}
+          <div className="flex-1 text-center lg:text-left">
+            <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#C9A915] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
+              Find The Best <br /> Style For You...
+            </h1>
 
-          <button
-            className="bg-yellow-700 text-black px-6 py-3 rounded-lg text-lg font-semibold font-poppins mt-6 hover:bg-yellow-600 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            aria-label="Get started with booking"
-          >
-            Get Started
-          </button>
+            <button
+              className="bg-yellow-700 text-black px-6 py-3 rounded-lg text-lg font-semibold font-poppins mt-6 hover:bg-yellow-600 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              aria-label="Get started with booking"
+            >
+              Get Started
+            </button>
+          </div>
+
+          {/* RIGHT: Image cluster (two-column approach on lg; stacked on small screens) */}
+          <div className="w-full lg:w-auto">
+            {/* On small screens: centered stacked layout.
+                On large screens: two-column (big left, small column right). */}
+            <div className="flex flex-col lg:flex-row lg:items-start lg:gap-6 items-center">
+              {/* Big circle (left on lg, top on mobile) */}
+              <div
+                className="relative rounded-full overflow-hidden float-main ring-blend"
+                style={{ width: 320, height: 320 }}
+                aria-hidden="true"
+              >
+                {/* use responsive sizing with inline style fallback - you can replace with tailwind utilities if preferred */}
+                <img
+                  src={Home1}
+                  alt="Barber trimming a customer's hair"
+                  loading="eager"
+                  className="w-full h-full object-cover block"
+                  style={{ width: "100%", height: "100%" }}
+                />
+                {/* golden 3/4 ring */}
+                <div
+                  className="absolute inset-0 rounded-full pointer-events-none"
+                  style={{
+                    border: "4px solid rgba(202,166,25,0.95)",
+                    borderTopColor: "transparent",
+                    borderLeftColor: "transparent",
+                    boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+                    transform: "rotate(90deg)",
+                  }}
+                />
+              </div>
+
+              {/* SMALL column - stacked vertically on both mobile & desktop (but placed right on lg due to flex direction) */}
+              <div className="flex flex-col items-center lg:items-center gap-6 mt-6 lg:mt-0">
+                {/* small top */}
+                <div
+                  className="relative rounded-full overflow-hidden float-small ring-blend"
+                  style={{ width: 110, height: 110 }}
+                  aria-hidden="true"
+                >
+                  <img
+                    src={Home2}
+                    alt="Barber working on customer's hair (detail)"
+                    loading="lazy"
+                    className="w-full h-full object-cover block"
+                  />
+                  <div
+                    className="absolute inset-0 rounded-full pointer-events-none"
+                    style={{
+                      border: "3px solid rgba(202,166,25,0.95)",
+                      borderTopColor: "transparent",
+                      borderLeftColor: "transparent",
+                      transform: "rotate(90deg)",
+                    }}
+                  />
+                </div>
+
+                {/* small bottom */}
+                <div
+                  className="relative rounded-full overflow-hidden float-small ring-blend"
+                  style={{ width: 150, height: 150 }}
+                  aria-hidden="true"
+                >
+                  <img
+                    src={Home3}
+                    alt="Beard trim example"
+                    loading="lazy"
+                    className="w-full h-full object-cover block"
+                  />
+                  <div
+                    className="absolute inset-0 rounded-full pointer-events-none"
+                    style={{
+                      border: "3px solid rgba(202,166,25,0.95)",
+                      borderTopColor: "transparent",
+                      borderLeftColor: "transparent",
+                      transform: "rotate(90deg)",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Image Section */}
-        <div className="relative hidden lg:block mt-10 lg:mt-0 lg:ml-auto w-full lg:w-auto">
-          {/* Main Image (big circle) */}
-          <div
-            className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden float-main ring-blend"
-            style={{ borderRadius: "9999px" }}
-          >
-            <img
-              src={Home1}
-              alt="Haircut"
-              loading="eager"
-              className="w-full h-full object-cover block"
-            />
-            {/* Golden ring (3/4) */}
-            <div
-              className="absolute inset-0 rounded-full pointer-events-none"
-              style={{
-                border: "4px solid rgba(202,166,25,0.95)",
-                borderTopColor: "transparent",
-                borderLeftColor: "transparent",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
-                transform: "rotate(90deg)",
-                filter: "blur(2px)",
-              }}
-            />
+        {/* Contact Section */}
+        <div className="mt-20 w-full max-w-4xl mx-auto px-4">
+          <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 mb-4 text-center sm:text-left">
+            <span className="text-yellow-700 text-lg font-poppins font-medium">
+              📞 Call Us : +94 782637487
+            </span>
           </div>
-
-          {/* Small Top Right Image */}
-          <div
-            className="absolute w-[110px] h-[110px] sm:w-[130px] sm:h-[130px] md:w-[150px] md:h-[150px] rounded-full overflow-hidden float-small1"
-            style={{
-              right: "-30px",
-              top: "20px",
-              zIndex: 30,
-            }}
-          >
-            <img
-              src={Home2}
-              alt="Side Haircut"
-              loading="lazy"
-              className="w-full h-full object-cover block"
-            />
-            {/* Partial Golden Ring */}
-            <div
-              className="absolute inset-0 rounded-full pointer-events-none"
-              style={{
-                border: "3px solid rgba(202,166,25,0.95)",
-                borderTopColor: "transparent",
-                borderLeftColor: "transparent",
-                transform: "rotate(90deg)",
-                filter: "blur(1px)",
-              }}
-            />
-          </div>
-
-          {/* Small Bottom Right Image */}
-          <div
-            className="absolute w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] md:w-[170px] md:h-[170px] rounded-full overflow-hidden float-small2"
-            style={{
-              right: "10px",
-              bottom: "-45px",
-              zIndex: 20,
-            }}
-          >
-            <img
-              src={Home3}
-              alt="Beard Trim"
-              loading="lazy"
-              className="w-full h-full object-cover block"
-            />
-            {/* Partial Golden Ring */}
-            <div
-              className="absolute inset-0 rounded-full pointer-events-none"
-              style={{
-                border: "3px solid rgba(202,166,25,0.95)",
-                borderTopColor: "transparent",
-                borderLeftColor: "transparent",
-                transform: "rotate(90deg)",
-                filter: "blur(1px)",
-              }}
-            />
+          <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+            <span className="text-yellow-700 text-lg font-medium">
+              🕒 Opening Hours: Sunday - Friday, 08 a.m - 09 p.m
+            </span>
           </div>
         </div>
       </div>
-
-      {/* Contact Section */}
-      <div className="mt-20 w-full max-w-4xl mx-auto px-4">
-        <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 mb-4 text-center sm:text-left">
-          <span className="text-yellow-700 text-lg font-poppins font-medium">
-            📞 Call Us : +94 782637487
-          </span>
-        </div>
-        <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-          <span className="text-yellow-700 text-lg font-medium">
-            🕒 Opening Hours: Sunday - Friday, 08 a.m - 09 p.m
-          </span>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
