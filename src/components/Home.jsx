@@ -31,7 +31,7 @@ const Home = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8">
           {/* LEFT: Text */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#C9A915] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
+            <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#876806] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
               Find The Best <br /> Style For You...
             </h1>
 
