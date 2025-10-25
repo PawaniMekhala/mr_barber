@@ -14,14 +14,25 @@ const Home = () => {
           100% { transform: translateY(0) rotate(0deg); }
         }
         @keyframes float-small {
-          0% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-6px) scale(1.01); }
-          100% { transform: translateY(0) scale(1); }
+          0% { transform: translateY(0) scale(1) rotate(0deg); }
+          25% { transform: translateY(-4px) scale(1.02) rotate(0.6deg); }
+          50% { transform: translateY(-8px) scale(1.01) rotate(1deg); }
+          75% { transform: translateY(-4px) scale(1.02) rotate(0.6deg); }
+          100% { transform: translateY(0) scale(1) rotate(0deg); }
+        }
+           @keyframes float-small2 {
+          0% { transform: translate(0, 0) rotate(0deg); }
+          20% { transform: translate(6px, -6px) rotate(-0.6deg); }
+          50% { transform: translate(12px, -10px) rotate(-1deg); }
+          80% { transform: translate(6px, -6px) rotate(-0.6deg); }
+          100% { transform: translate(0, 0) rotate(0deg); }
         }
         .float-main { animation: float-main 4s ease-in-out infinite; transform-origin: center; }
-        .float-small { animation: float-small 3.8s ease-in-out infinite; transform-origin: center; }
-        @media (prefers-reduced-motion: reduce) {
-          .float-main, .float-small { animation: none !important; }
+        .float-small { animation: float-small 3.6s ease-in-out infinite; transform-origin: center; }
+         .float-small2 { animation: float-small2 5.2s ease-in-out infinite; transform-origin: center; }
+        
+         @media (prefers-reduced-motion: reduce) {
+          .float-main, .float-small, .float-small2 { animation: none !important; }
         }
         .ring-blend { box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
       `}</style>
@@ -102,7 +113,7 @@ const Home = () => {
 
                 {/* small bottom */}
                 <div
-                  className="relative rounded-full overflow-hidden float-small ring-blend"
+                  className="relative rounded-full overflow-hidden ring-blend float-small2"
                   style={{ width: 150, height: 150 }}
                   aria-hidden="true"
                 >
