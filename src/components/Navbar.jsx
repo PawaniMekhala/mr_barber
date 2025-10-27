@@ -90,13 +90,13 @@ const Navbar = () => {
 
       {/* Gold Separator Line at the very bottom of the entire nav structure */}
       <div
-        className="absolute bottom-0 left-0 right-0 h-1"
-        style={{ background: "#A68B2F" }}
+        className="absolute bottom-0 left-0 right-0 h-0.5"
+        style={{ background: "#876806" }}
       ></div>
 
       {/* --- Mobile Navigation Menu --- */}
       <ul
-        className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] transition-transform duration-500 z-40 ${
+        className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#876806] transition-transform duration-500 z-40 ${
           nav ? "translate-x-0" : "-translate-x-full"
         }`}
       >
