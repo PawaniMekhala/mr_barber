@@ -15,7 +15,7 @@ const Navbar = () => {
     { id: 5, text: "Reviews" },
   ];
 
-  // Custom styles for the dark-gold buttons (for the gradient and shadow)
+  // Custom styles for the dark-gold buttons
   const appointmentBtnStyle = {
     background: "linear-gradient(to bottom, #A68B2F 0%, #705B1E 100%)",
     boxShadow:
