@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Logo from "../assets/logo.png";
 
 const Navbar = () => {
-  // State to manage the navbar's visibility
   const [nav, setNav] = useState(false);
-
-  // Toggle function to handle the navbar's display
   const handleNav = () => {
     setNav(!nav);
   };
 
-  // Array containing navigation items
   const navItems = [
     { id: 1, text: "Home" },
     { id: 2, text: "About Us" },
@@ -20,17 +15,38 @@ const Navbar = () => {
     { id: 5, text: "Reviews" },
   ];
 
-  return (
-    <div>
-      {/* Top Navbar */}
-      <div className="bg-neutral-900 flex justify-between items-center h-24 max-w-[3000px] mx-auto px-4 text-white">
-        {/* Logo */}
-        <h1 className="w-full text-5xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-200">
-          Mr. Barber
-        </h1>
+  // Custom styles for the dark-gold buttons (for the gradient and shadow)
+  const appointmentBtnStyle = {
+    background: "linear-gradient(to bottom, #A68B2F 0%, #705B1E 100%)",
+    boxShadow:
+      "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4)",
+    color: "white",
+    fontSize: "16px", // Slightly smaller on the bottom bar
+  };
 
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex">
+  const staffBtnStyle = {
+    background: "linear-gradient(to bottom, #9B822A 0%, #68551A 100%)",
+    boxShadow:
+      "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4)",
+    color: "white",
+    fontSize: "16px",
+  };
+
+  return (
+    // Outer container for both rows, positioned relatively for the gold separator
+    <nav className="bg-neutral-900 text-white relative">
+      {/* 1. Top Bar: Logo and Navigation Links */}
+      <div className="container mx-auto flex justify-between items-center h-16 px-28 ">
+        {/* Logo */}
+        <div
+          className="text-8xl mervale-font racking-wider whitespace-nowrap pt-16"
+          style={{ color: "#876806" }}
+        >
+          Mr. Barber
+        </div>
+
+        {/* Desktop Navigation Links */}
+        <ul className="hidden md:flex items-center space-x-6 text-lg font-medium">
           {navItems.map((item) => (
             <li
               key={item.id}
@@ -44,51 +60,68 @@ const Navbar = () => {
         {/* Mobile Navigation Icon */}
         <div
           onClick={handleNav}
-          className="block md:hidden"
+          className="block md:hidden cursor-pointer z-50"
           role="button"
           aria-label="Toggle navigation"
         >
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
         </div>
-
-        {/* Mobile Navigation Menu */}
-        <ul
-          className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] transition-transform duration-500 ${
-            nav ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          {/* Mobile Logo */}
-          <div className="flex justify-center items-center py-4">
-            <img
-              src={Logo}
-              alt="Mr. Barber Logo"
-              className="w-30 h-30 object-contain"
-            />
-          </div>
-
-          {/* Mobile Navigation Items */}
-          {navItems.map((item) => (
-            <li
-              key={item.id}
-              className="py-2 px-6 border-b rounded-xl hover:bg-[#876806] duration-300 hover:text-black cursor-pointer border-gray-600"
-            >
-              {item.text}
-            </li>
-          ))}
-        </ul>
       </div>
-      {/* Bottom Navbar */}
-      <div className="bg-neutral-900 flex justify-end items-center h-16 px-4 text-white">
-        <button className="bg-yellow-700 hover:bg-yellow-600 text-black font-semibold font-poppins py-2 px-6 rounded-xl m-2">
-          Appointment
-        </button>
-        <button className="bg-transparent border border-yellow-700 hover:bg-yellow-700 text-yellow-700 hover:text-black font-semibold font-poppins py-2 px-6 rounded-xl m-2">
-          Staff
-        </button>
+
+      {/* 2. Bottom Bar: Action Buttons */}
+      <div className="w-full h-16 px-4 flex justify-end items-center border-t border-gray-900 md:border-t-0">
+        <div className="flex space-x-4">
+          {/* Appointment Button */}
+          <button
+            className="px-6 py-2 rounded-md font-semibold"
+            style={appointmentBtnStyle}
+          >
+            Appointment
+          </button>
+          {/* Staff Button */}
+          <button
+            className="px-6 py-2 rounded-md font-semibold"
+            style={staffBtnStyle}
+          >
+            Staff
+          </button>
+        </div>
       </div>
-      {/* Yellow Line */}
-      <div className="w-full h-[1px] bg-yellow-700"></div>
-    </div>
+
+      {/* Gold Separator Line at the very bottom of the entire nav structure */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-1"
+        style={{ background: "#A68B2F" }}
+      ></div>
+
+      {/* --- Mobile Navigation Menu --- */}
+      <ul
+        className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#000300] transition-transform duration-500 z-40 ${
+          nav ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        {navItems.map((item) => (
+          <li
+            key={item.id}
+            className="p-4 border-b border-gray-600 cursor-pointer hover:bg-neutral-800"
+          >
+            {item.text}
+          </li>
+        ))}
+        {/* Add mobile buttons here if needed */}
+        <li className="p-4 mt-4">
+          <button
+            className="w-full py-2 mb-2 rounded-md"
+            style={appointmentBtnStyle}
+          >
+            Appointment
+          </button>
+          <button className="w-full py-2 rounded-md" style={staffBtnStyle}>
+            Staff
+          </button>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
