@@ -132,6 +132,14 @@ const Home = () => {
         </div>
 
         {/* Contact Section */}
+        <div className="mt-20 w-full max-w-4xl mx-auto px-4">
+          {/* Get Started Button */}
+          <div className="flex mb-4">
+            <button className="border-2 border-yellow-700 text-yellow-700 px-6 py-3 rounded-lg text-lg font-semibold font-poppins hover:bg-yellow-700 hover:text-black transition">
+              Get Started
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
