@@ -45,13 +45,6 @@ const Home = () => {
             <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#876806] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
               Find The Best <br /> Style For You...
             </h1>
-
-            <button
-              className="bg-yellow-700 text-black px-6 py-3 rounded-lg text-lg font-semibold font-poppins mt-6 hover:bg-yellow-600 transition focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              aria-label="Get started with booking"
-            >
-              Get Started
-            </button>
           </div>
 
           {/* RIGHT: Image cluster (two-column approach on lg; stacked on small screens) */}
