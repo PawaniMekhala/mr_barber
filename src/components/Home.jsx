@@ -139,7 +139,7 @@ const Home = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-20 w-full max-w-4xl mx-auto px-4">
+        {/* <div className="mt-20 w-full max-w-4xl mx-auto px-4">
           <div className="bg-gray-900 px-6 py-4 rounded-lg flex flex-col sm:flex-row items-center gap-4 mb-4 text-center sm:text-left">
             <span className="text-yellow-700 text-lg font-poppins font-medium">
               📞 Call Us : +94 782637487
@@ -150,7 +150,7 @@ const Home = () => {
               🕒 Opening Hours: Sunday - Friday, 08 a.m - 09 p.m
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
