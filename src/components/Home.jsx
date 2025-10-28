@@ -143,13 +143,13 @@ const Home = () => {
           {/* Contact + Hours Box */}
           <div className="flex flex-col sm:flex-row justify-between items-center border border-yellow-700 rounded-lg px-6 py-4 gap-4 text-center sm:text-left">
             {/* Call */}
-            <div className="flex items-center gap-2 text-yellow-700 text-lg font-poppins font-medium">
+            <div className="flex items-center gap-2 text-white text-lg font-poppins font-medium">
               <i className="fa-brands fa-whatsapp text-xl"></i>
               <span>Call Us : +94 782637487</span>
             </div>
 
             {/* Opening Hours */}
-            <div className="flex items-center gap-2 text-yellow-700 text-lg font-poppins font-medium">
+            <div className="flex items-center gap-2 text-white text-lg font-poppins font-medium">
               <i className="fa-regular fa-calendar-days text-xl"></i>
               <span>Opening Hours : Sunday – Friday, 08 a.m – 09 p.m</span>
             </div>
