@@ -39,7 +39,7 @@ const Home = () => {
 
       {/* Content wrapper */}
       <div className="w-full max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-8">
+        <div className="flex flex-col lg:flex-row gap-6">
           {/* LEFT: Text */}
           <div className="flex-1 text-center lg:text-left">
             <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#876806] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
@@ -132,10 +132,10 @@ const Home = () => {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-20 w-full max-w-4xl mx-auto px-4">
+        <div className="mt-20 w-full max-w-4xl mx-auto px-2">
           {/* Get Started Button */}
           <div className="flex mb-4">
-            <button className="border-2 border-yellow-700 text-yellow-700 px-6 py-3 rounded-lg text-lg font-semibold font-poppins hover:bg-yellow-700 hover:text-black transition">
+            <button className="border-2 border-yellow-700 text-yellow-700 px-4 py-3 rounded-lg text-lg font-semibold font-poppins hover:bg-yellow-700 hover:text-black transition">
               Get Started
             </button>
           </div>
