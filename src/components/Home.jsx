@@ -39,10 +39,10 @@ const Home = () => {
 
       {/* Content wrapper */}
       <div className="w-full max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-10">
           {/* LEFT: Text */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="font-playfair font-semibold text-[40px] sm:text-[55px] lg:text-[70px] leading-[100%] tracking-[0.02em] text-[#876806] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
+            <h1 className="font-playfair font-semibold text-4xl sm:text-6xl lg:text-7xl leading-[100%] tracking-[0.02em] text-[#876806] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
               Find The Best <br /> Style For You...
             </h1>
           </div>
@@ -141,7 +141,7 @@ const Home = () => {
           </div>
 
           {/* Contact + Hours Box */}
-          <div className="flex flex-col sm:flex-row justify-between items-center border border-yellow-700 rounded-lg px-6 py-4 gap-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-between items-center border border-yellow-700 rounded-lg px-6 py-4 gap-4 text-center sm:text-left">
             {/* Call */}
             <div className="flex items-center gap-2 text-white text-lg font-poppins font-medium">
               <i className="fa-brands fa-whatsapp text-xl"></i>
