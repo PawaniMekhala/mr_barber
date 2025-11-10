@@ -54,8 +54,8 @@ const Home = () => {
             <div className="flex flex-col lg:flex-row lg:items-start lg:gap-6 items-center">
               {/* Big circle (left on lg, top on mobile) */}
               <div
-                className="relative rounded-full overflow-hidden float-main ring-blend"
-                style={{ width: 320, height: 320 }}
+                className="relative rounded-full overflow-hidden float-main ring-blend w-48 sm:w-64 lg:w-80 aspect-square"
+                // style={{ width: 320, height: 320 }}
                 aria-hidden="true"
               >
                 {/* use responsive sizing with inline style fallback - you can replace with tailwind utilities if preferred */}
@@ -83,8 +83,8 @@ const Home = () => {
               <div className="flex flex-col items-center lg:items-center gap-6 mt-6 lg:mt-0">
                 {/* small top */}
                 <div
-                  className="relative rounded-full overflow-hidden float-small ring-blend"
-                  style={{ width: 110, height: 110 }}
+                  className="relative rounded-full overflow-hidden float-small ring-blend w-28 sm:w-36 lg:w-44 aspect-square"
+                  // style={{ width: 110, height: 110 }}
                   aria-hidden="true"
                 >
                   <img
@@ -106,8 +106,8 @@ const Home = () => {
 
                 {/* small bottom */}
                 <div
-                  className="relative rounded-full overflow-hidden ring-blend float-small2"
-                  style={{ width: 150, height: 150 }}
+                  className="relative rounded-full overflow-hidden ring-blend float-small2 w-20 sm:w-28 lg:w-32 aspect-square"
+                  // style={{ width: 150, height: 150 }}
                   aria-hidden="true"
                 >
                   <img
