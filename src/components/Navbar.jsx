@@ -36,17 +36,17 @@ const Navbar = () => {
     // Outer container for both rows, positioned relatively for the gold separator
     <nav className="bg-neutral-900 text-white relative">
       {/* 1. Top Bar: Logo and Navigation Links */}
-      <div className="w-full max-w-7xl mx-auto flex justify-between items-center h-16 px-4 sm:px-8 lg:px-28 ">
+      <div className="w-full max-w-7xl mx-auto flex justify-between items-center h-auto px-4 sm:px-6 md:px-10 lg:px-20 xl:px-28 py-4 flex-wrap">
         {/* Logo */}
         <div
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl mervale-font racking-wider whitespace-nowrap pt-6 lg:pt-16"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl mervale-font racking-wider whitespace-nowrap pt-6 lg:pt-16"
           style={{ color: "#876806" }}
         >
           Mr. Barber
         </div>
 
         {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex items-center space-x-6 text-lg font-medium">
+        <ul className="hidden md:flex items-center space-x-3 lg:space-x-6 text-base lg:text-lg font-medium">
           {navItems.map((item) => (
             <li
               key={item.id}
@@ -96,7 +96,7 @@ const Navbar = () => {
 
       {/* --- Mobile Navigation Menu --- */}
       <ul
-        className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#876806] transition-transform duration-500 z-40 ${
+        className={`fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-gray-900 bg-[#876806] transition-transform duration-500 z-50 ${
           nav ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -108,18 +108,6 @@ const Navbar = () => {
             {item.text}
           </li>
         ))}
-        {/* Add mobile buttons here if needed */}
-        <li className="p-4 mt-4">
-          <button
-            className="w-full py-2 mb-2 rounded-md"
-            style={appointmentBtnStyle}
-          >
-            Appointment
-          </button>
-          <button className="w-full py-2 rounded-md" style={staffBtnStyle}>
-            Staff
-          </button>
-        </li>
       </ul>
     </nav>
   );
