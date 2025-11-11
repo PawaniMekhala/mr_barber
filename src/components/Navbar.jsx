@@ -36,10 +36,10 @@ const Navbar = () => {
     // Outer container for both rows, positioned relatively for the gold separator
     <nav className="bg-neutral-900 text-white relative">
       {/* 1. Top Bar: Logo and Navigation Links */}
-      <div className="container mx-auto flex justify-between items-center h-16 px-28 ">
+      <div className="w-full max-w-7xl mx-auto flex justify-between items-center h-16 px-4 sm:px-8 lg:px-28 ">
         {/* Logo */}
         <div
-          className="text-8xl mervale-font racking-wider whitespace-nowrap pt-16"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl mervale-font racking-wider whitespace-nowrap pt-6 lg:pt-16"
           style={{ color: "#876806" }}
         >
           Mr. Barber
