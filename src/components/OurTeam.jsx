@@ -7,43 +7,76 @@ import Owner from "../assets/images for saloon/owner.jpg";
 
 const OurTeam = () => {
   const staff = [
-    { name: "T.B.Perera", image: Owner, position: "Founder" },
-    { name: "Jerom Bell", image: Staff1, position: "Co-Founder" },
-    { name: "Yasmine Tano", image: Staff2, position: "Chairman" },
-    { name: "Martin Darbys", image: Staff3, position: "CEO" },
-    { name: "Patrick Angely", image: Staff4, position: "Product Manager" },
-    { name: "Jerom Bell", image: Staff1, position: "Co-Founder" },
+    {
+      name: "T.B.Perera",
+      image: Owner,
+      position: "Founder",
+      description:
+        "The visionary behind our salon, setting the standards for excellence.",
+    },
+    {
+      name: "Jerom Bell",
+      image: Staff1,
+      position: "Co-Founder",
+      description: "Co-founder and creative mind leading the design team.",
+    },
+    {
+      name: "Yasmine Tano",
+      image: Staff2,
+      position: "Chairman",
+      description: "Focused on vision, leadership, and growth.",
+    },
+    {
+      name: "Martin Darbys",
+      image: Staff3,
+      position: "CEO",
+      description: "Leads with passion and commitment to perfection.",
+    },
+    {
+      name: "Patrick Angely",
+      image: Staff4,
+      position: "Product Manager",
+      description: "Ensures quality in every product we deliver.",
+    },
+    {
+      name: "Jerom Bell",
+      image: Staff1,
+      position: "Co-Founder",
+      description: "Dedicated to modern trends and unique designs.",
+    },
   ];
+
   return (
     <div className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Main Text  */}
-        <div className="mb-12">
-          <h2 className="text-7xl font-semibold font-playfair text-yellow-700 ">
-            Our team...{" "}
-          </h2>
-        </div>
-        {/* Staff Image Gallery */}
-        <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-8 max-w-xl mx-auto md:max-w-3xl lg:max-w-full">
-          {staff.map(({ name, image, position }, index) => {
+        {/* Team heading */}
+        <h2 className="text-7xl font-semibold font-playfair text-yellow-700 mb-14">
+          Our Team...
+        </h2>
+        <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+          {/* Team members */}
+          {staff.map(({ name, position, description, image }, index) => {
             return (
               <div
                 key={index}
-                className="block group md:col-span-2 lg:col-span-1 "
+                className="group relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 transition-transform duration-300 ease-in-out hover:-translate-y-2"
               >
-                <div className="relative mb-6">
-                  <img
-                    src={image}
-                    alt="Antonio"
-                    className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"
-                  />
+                <img
+                  src={image}
+                  alt={name}
+                  className="absolute inset-0 -z-10 h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
+                />
+                {/* Dark overlay on hover */}
+                <div className="absolute inset-0 -z-10 bg-black/40 group-hover:bg-black/60 transition-all duration-500"></div>
+
+                {/* Info content */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h4 className="text-2xl font-semibold text-yellow-700">
+                    {name}
+                  </h4>
+                  <p className="text-lg text-white">~{position}</p> <br></br>
+                  <p className="mt-2 text-sm text-gray-300">{description}</p>
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
-                  {name}
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  {position}
-                </span>
               </div>
             );
           })}
