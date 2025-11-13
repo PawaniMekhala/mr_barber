@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Gallery1 from "../assets/galary_img/gallery1.jpg";
 import Gallery2 from "../assets/galary_img/gallery2.jpg";
 import Gallery3 from "../assets/galary_img/gallery3.jpg";
@@ -17,33 +17,77 @@ const Gallery = () => {
     { image: Gallery6 },
     { image: Gallery7 },
   ];
+
+  // Track the current start index of visible images
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleCount = 4; // how many images to show at a time
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? galleryItem.length - visibleCount : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + visibleCount >= galleryItem.length ? 0 : prevIndex + 1
+    );
+  };
+
+  const visibleImages = galleryItem.slice(
+    currentIndex,
+    currentIndex + visibleCount
+  );
+
+  // Handle looping from end to start
+  if (visibleImages.length < visibleCount) {
+    visibleImages.push(
+      ...galleryItem.slice(0, visibleCount - visibleImages.length)
+    );
+  }
+
   return (
-    <div className="py-24 ">
+    <div className="py-24 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Text  */}
         <div className="mb-12">
           <h2 className="text-7xl font-semibold font-playfair text-yellow-700 ">
-            Gallery...{" "}
+            Gallery...
           </h2>
         </div>
-        {/* Image Gallery */}
-        <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-6 lg:grid-cols-5 gap-8 max-w-xl mx-auto md:max-w-3xl lg:max-w-full">
-          {galleryItem.map(({ image }, index) => {
-            return (
+        {/* Image Gallery Container */}
+        <div className="relative flex items-center justify-center">
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 bg-yellow-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
+          >
+            &#8249;
+          </button>
+
+          {/* Image Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl mx-auto">
+            {visibleImages.map(({ image }, index) => (
               <div
                 key={index}
-                className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+                className="relative overflow-hidden rounded-2xl h-64"
               >
                 <img
                   src={image}
                   alt=""
-                  className="absolute inset-0 -z-10 h-full w-full object-cover"
+                  className="h-full w-full object-cover"
                 />
-                {/* <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-                <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div> */}
               </div>
-            );
-          })}
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-10 bg-yellow-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
+          >
+            &#8250;
+          </button>
         </div>
       </div>
     </div>
