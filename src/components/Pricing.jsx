@@ -114,7 +114,6 @@ const Pricing = () => {
             </div>
           ))}
         </div>
-        {/* // */}
       </div>
     </div>
   );
