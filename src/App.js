@@ -8,6 +8,7 @@ import Gallery from "./components/Gallery";
 import Pricing from "./components/Pricing";
 import Test from "./components/Test";
 import Review from "./components/Review";
+import AppointmentForm from "./components/AppointmentForm";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Pricing/>
       <Gallery/>
       <Review/>
+      <AppointmentForm/>
       <Test/>
       <Footer />
     </div>
