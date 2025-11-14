@@ -23,28 +23,19 @@ const Gallery = () => {
   const visibleCount = 4; // how many images to show at a time
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? galleryItem.length - visibleCount : prevIndex - 1
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + galleryItem.length) % galleryItem.length
     );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + visibleCount >= galleryItem.length ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % galleryItem.length);
   };
 
-  const visibleImages = galleryItem.slice(
-    currentIndex,
-    currentIndex + visibleCount
+  const visibleImages = Array.from(
+    { length: visibleCount },
+    (_, i) => galleryItem[(currentIndex + i) % galleryItem.length]
   );
-
-  // Handle looping from end to start
-  if (visibleImages.length < visibleCount) {
-    visibleImages.push(
-      ...galleryItem.slice(0, visibleCount - visibleImages.length)
-    );
-  }
 
   return (
     <div className="py-24 relative">
@@ -62,7 +53,7 @@ const Gallery = () => {
             onClick={handlePrev}
             className="absolute left-6 top-1/2 -translate-y-1/2 z-10 bg-yellow-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
           >
-            &#8249;
+            ❮
           </button>
 
           {/* Image Grid */}
@@ -86,7 +77,7 @@ const Gallery = () => {
             onClick={handleNext}
             className="absolute right-6 top-1/2 -translate-y-1/2 z-10 bg-yellow-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
           >
-            &#8250;
+            ❯
           </button>
         </div>
       </div>
