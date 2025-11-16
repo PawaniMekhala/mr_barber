@@ -15,7 +15,6 @@ const Navbar = () => {
     { id: 5, text: "Reviews" },
   ];
 
-  // Custom styles for the dark-gold buttons
   const appointmentBtnStyle = {
     background: "linear-gradient(to bottom, #A68B2F 0%, #705B1E 100%)",
     boxShadow:
@@ -33,10 +32,9 @@ const Navbar = () => {
   };
 
   return (
-    // Outer container for both rows, positioned relatively for the gold separator
     <nav className="bg-neutral-900 text-white relative">
       <div className="overflow-x-auto">
-        {/* 1. Top Bar: Logo and Navigation Links */}
+        {/* Logo and Navigation Links */}
         <div className="w-full max-w-7xl mx-auto flex justify-between items-center h-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 flex-nowrap">
           {/* Logo */}
           <div
@@ -69,7 +67,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* 2. Bottom Bar: Action Buttons */}
+        {/* Bottom Bar: Action Buttons */}
         <div className="w-full h-16 px-4 flex justify-end items-center border-t border-gray-900 md:border-t-0">
           <div className="flex space-x-4">
             {/* Appointment Button */}
@@ -89,7 +87,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Gold Separator Line at the very bottom of the entire nav structure */}
+        {/* Gold Separator Line */}
         <div
           className="absolute bottom-0 left-0 right-0 h-0.5"
           style={{ background: "#876806" }}
