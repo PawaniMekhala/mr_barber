@@ -24,7 +24,7 @@ const Services = () => {
         <h2 className="text-7xl font-semibold font-playfair text-yellow-700 mb-14">
           Our Services...
         </h2>
-        {/* Services cards */}
+        {/* Service cards */}
         <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
           {serviceItem.map(({ text, image }, index) => {
             return (
