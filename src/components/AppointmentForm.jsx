@@ -1,13 +1,24 @@
 import React, { useRef } from "react";
-import { CalendarIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import {
+  CalendarIcon,
+  ChevronDownIcon,
+  ClockIcon,
+} from "@heroicons/react/24/outline";
 
 const AppointmentForm = () => {
   // reference for date input
   const dateRef = useRef(null);
+  const timeRef = useRef(null);
 
   const openDatePicker = () => {
     if (dateRef.current && dateRef.current.showPicker) {
       dateRef.current.showPicker(); // Opens native calendar
+    }
+  };
+
+  const openTimePicker = () => {
+    if (timeRef.current && timeRef.current.showPicker) {
+      timeRef.current.showPicker();
     }
   };
 
@@ -92,8 +103,17 @@ const AppointmentForm = () => {
             </div>
 
             {/* Time input */}
-            <div>
-              <Input label="Time" name="time" type="time" />
+            <div className="relative w-full">
+              <label className="sr-only">Appointment Time</label>
+              <input
+                ref={timeRef}
+                type="time"
+                className="w-full bg-transparent border-b border-gold-600 py-2 pr-8 placeholder-gold-700 text-gold-50 focus:outline-none focus:border-gold-400"
+              />
+              <ClockIcon
+                onClick={openTimePicker}
+                className="w-5 h-5 absolute right-0 top-2 text-gold-600 cursor-pointer"
+              />
             </div>
           </div>
 
