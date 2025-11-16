@@ -57,7 +57,7 @@ const Gallery = () => {
           </button>
 
           {/* Image Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-6xl mx-auto">
             {visibleImages.map(({ image }, index) => (
               <div
                 key={index}
