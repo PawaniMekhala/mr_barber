@@ -37,28 +37,23 @@ const Home = () => {
         .ring-blend { box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
       `}</style>
 
-      {/* Content wrapper */}
       <div className="w-full max-w-6xl mx-auto overflow-hidden">
         <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-10">
-          {/* LEFT: Text */}
+          {/* Main Text */}
           <div className="flex-1 text-center lg:text-left">
             <h1 className="font-playfair font-semibold text-4xl sm:text-6xl lg:text-7xl leading-[100%] tracking-[0.02em] text-[#876806] opacity-100 drop-shadow-[2px_25px_2px_rgba(0,0,0,0.25)]">
               Find The Best <br /> Style For You...
             </h1>
           </div>
 
-          {/* RIGHT: Image cluster (two-column approach on lg; stacked on small screens) */}
+          {/* Image cluster */}
           <div className="w-full lg:w-auto">
-            {/* On small screens: centered stacked layout.
-                On large screens: two-column (big left, small column right). */}
             <div className="flex flex-col lg:flex-row lg:items-start lg:gap-6 items-center w-full max-w-full overflow-hidden">
-              {/* Big circle (left on lg, top on mobile) */}
+              {/* Big img*/}
               <div
                 className="relative rounded-full overflow-hidden float-main ring-blend w-48 sm:w-56 md:w-64 lg:w-72 aspect-square mx-auto lg:mx-0"
-                // style={{ width: 320, height: 320 }}
                 aria-hidden="true"
               >
-                {/* use responsive sizing with inline style fallback - you can replace with tailwind utilities if preferred */}
                 <img
                   src={Home1}
                   alt="Barber trimming a customer's hair"
@@ -79,12 +74,10 @@ const Home = () => {
                 />
               </div>
 
-              {/* SMALL column - stacked vertically on both mobile & desktop (but placed right on lg due to flex direction) */}
               <div className="flex flex-col items-center lg:items-center gap-6 mt-6 lg:mt-0">
                 {/* small top */}
                 <div
                   className="relative rounded-full overflow-hidden float-small ring-blend w-28 sm:w-36 lg:w-44 aspect-square"
-                  // style={{ width: 110, height: 110 }}
                   aria-hidden="true"
                 >
                   <img
@@ -107,7 +100,6 @@ const Home = () => {
                 {/* small bottom */}
                 <div
                   className="relative rounded-full overflow-hidden ring-blend float-small2 w-20 sm:w-28 lg:w-32 aspect-square"
-                  // style={{ width: 150, height: 150 }}
                   aria-hidden="true"
                 >
                   <img
