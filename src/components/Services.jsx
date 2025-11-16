@@ -30,7 +30,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="group relative isolate flex flex-col justify-center items-center overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+                className="group relative isolate flex flex-col justify-end items-center overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
               >
                 <img
                   src={image}
