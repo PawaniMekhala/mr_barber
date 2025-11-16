@@ -13,8 +13,16 @@
     font-family: 'Mervale Script', cursive;
     color: #876806;
   }
-
-  html, body {
+ html, body {
   max-width: 100%;
   overflow-x: hidden;
+ 
 }
+
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: none;
+}
+
