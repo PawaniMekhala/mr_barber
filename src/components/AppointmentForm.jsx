@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import { CalendarIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const AppointmentForm = () => {
+  // reference for date input
+  const dateRef = useRef(null);
+
+  const openDatePicker = () => {
+    if (dateRef.current && dateRef.current.showPicker) {
+      dateRef.current.showPicker(); // Opens native calendar
+    }
+  };
+
   const Input = ({ label, ...props }) => (
     <div className="w-full">
       <label className="sr-only">{label}</label>
@@ -30,7 +39,7 @@ const AppointmentForm = () => {
             <Input label="Email Address" name="email" type="email" />
             <Input label="Phone number" name="phone" type="tel" />
 
-            {/* Dropdowns */}
+            {/* Category dropdown  */}
             <div className="relative">
               <label className="sr-only">Category</label>
               <select
@@ -47,6 +56,7 @@ const AppointmentForm = () => {
               <ChevronDownIcon className="w-5 h-5 absolute right-0 top-3 text-gold-600 pointer-events-none" />
             </div>
 
+            {/* Barber dropdown */}
             <div className="relative">
               <label className="sr-only">Select Barber</label>
               <select
@@ -63,18 +73,25 @@ const AppointmentForm = () => {
               <ChevronDownIcon className="w-5 h-5 absolute right-0 top-3 text-gold-600 pointer-events-none" />
             </div>
 
-            {/* Date & Time */}
+            {/* Date Input with custom icon */}
             <div className="flex items-center gap-2">
               <div className="relative w-full">
                 <label className="sr-only">Appointment Date</label>
                 <input
+                  ref={dateRef}
                   type="date"
                   className="w-full bg-transparent border-b border-gold-600 py-2 pr-8 placeholder-gold-700 text-gold-50 focus:outline-none focus:border-gold-400"
                 />
-                <CalendarIcon className="w-5 h-5 absolute right-0 top-2 text-gold-600 pointer-events-none" />
+
+                {/* Make icon clickable */}
+                <CalendarIcon
+                  onClick={openDatePicker}
+                  className="w-5 h-5 absolute right-0 top-2 text-gold-600 cursor-pointer"
+                />
               </div>
             </div>
 
+            {/* Time input */}
             <div>
               <Input label="Time" name="time" type="time" />
             </div>
@@ -101,7 +118,7 @@ const AppointmentForm = () => {
           </div>
         </form>
 
-        {/* small arrow/chevron bottom-right (like screenshot) */}
+        {/* bottom arrow */}
         <div className="fixed right-6 bottom-6 text-gold-600">
           <span style={{ transform: "rotate(90deg)", display: "inline-block" }}>
             ⌃
