@@ -54,7 +54,7 @@ const AppointmentForm = () => {
             <div className="relative">
               <label className="sr-only">Category</label>
               <select
-                className="w-full bg-transparent border-b border-gold-600 py-2 pl-0 pr-8 appearance-none placeholder-gold-700 text-gold-50 focus:outline-none focus:border-gold-400"
+                className="w-full bg-transparent border-b border-gold-600 py-2 pl-0 pr-8 appearance-none placeholder-gold-700 text-[#876806] focus:outline-none focus:border-gold-400"
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -71,7 +71,8 @@ const AppointmentForm = () => {
             <div className="relative">
               <label className="sr-only">Select Barber</label>
               <select
-                className="w-full bg-transparent border-b border-gold-600 py-2 pl-0 pr-8 appearance-none placeholder-gold-700 text-gold-50 focus:outline-none focus:border-gold-400"
+                className="w-full bg-transparent border-b border-gold-600 py-2 pl-0 pr-8 appearance-none placeholder-gold-700 text-[#876806] focus:outline-none focus:border-gold-400
+                "
                 defaultValue=""
               >
                 <option value="" disabled>
@@ -97,7 +98,8 @@ const AppointmentForm = () => {
                 {/* Make icon clickable */}
                 <CalendarIcon
                   onClick={openDatePicker}
-                  className="w-5 h-5 absolute right-0 top-2 text-gold-600 cursor-pointer"
+                  className="w-5 h-5 absolute right-0 top-2 text-gold-600 cursor-pointer
+                  [color-scheme:dark]"
                 />
               </div>
             </div>
@@ -108,7 +110,8 @@ const AppointmentForm = () => {
               <input
                 ref={timeRef}
                 type="time"
-                className="w-full bg-transparent border-b border-gold-600 py-2 pr-8 placeholder-gold-700 text-gold-50 focus:outline-none focus:border-gold-400"
+                className="w-full bg-transparent border-b border-gold-600 py-2 pr-8 placeholder-gold-700 text-gold-50 focus:outline-none focus:border-gold-400
+                [color-scheme:dark]"
               />
               <ClockIcon
                 onClick={openTimePicker}
