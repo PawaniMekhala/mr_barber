@@ -9,6 +9,7 @@ const AboutUs = () => {
           <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
             <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
+                {/* heading  */}
                 <h1 className="text-7xl font-semibold font-playfair text-yellow-700 leading-normal lg:text-start text-center">
                   About Us...
                 </h1>
