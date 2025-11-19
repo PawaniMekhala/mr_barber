@@ -4,6 +4,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Gallery1 from "../assets/galary_img/gallery1.jpg";
 import Gallery2 from "../assets/galary_img/gallery2.jpg";
 import Gallery3 from "../assets/galary_img/gallery3.jpg";
+import FeedbackModal from "../Modals/FeedbackModal";
 
 const reviews = [
   {
@@ -103,6 +104,7 @@ const reviews = [
 
 const Review = () => {
   const [index, setIndex] = useState(0); // starting index
+  const [showForm, setShowForm] = useState(false);
   const visibleReviews = reviews.slice(index, index + 3);
 
   const handleNext = () => {
@@ -165,9 +167,13 @@ const Review = () => {
         </div>
 
         <div className="flex justify-center mt-6">
-          <button className="bg-[#B5913E] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#9c7a30]">
+          <button
+            onClick={() => setShowForm(true)}
+            className="bg-[#B5913E] text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#9c7a30]"
+          >
             Give Feedback
           </button>
+          {showForm && <FeedbackModal onClose={() => setShowForm(false)} />}
         </div>
       </div>
     </div>
