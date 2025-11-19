@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Gallery1 from "../assets/galary_img/gallery1.jpg";
@@ -54,9 +54,69 @@ const reviews = [
     review:
       "The combination of professionalism and style makes this barbershop stand out.",
   },
+  {
+    id: 7,
+    name: "Dilan Perera",
+    image: Gallery1,
+    rating: 5,
+    review:
+      "I got a haircut and beard trim, and it was the best grooming experience I’ve had.",
+  },
+  {
+    id: 8,
+    name: "Samith Peries",
+    image: Gallery2,
+    rating: 5,
+    review: "They genuinely care about customer satisfaction.",
+  },
+  {
+    id: 9,
+    name: "Amir John",
+    image: Gallery3,
+    rating: 5,
+    review:
+      "The combination of professionalism and style makes this barbershop stand out.",
+  },
+  {
+    id: 10,
+    name: "Dilan Perera",
+    image: Gallery1,
+    rating: 5,
+    review: "I got a haircut and beard trim, and it was best.",
+  },
+  {
+    id: 11,
+    name: "Samith Peries",
+    image: Gallery2,
+    rating: 5,
+    review: "Highly recommend!",
+  },
+  {
+    id: 12,
+    name: "Amir John",
+    image: Gallery3,
+    rating: 5,
+    review:
+      "The combination of professionalism and style makes this barbershop stand out.",
+  },
 ];
 
 const Review = () => {
+  const [index, setIndex] = useState(0); // starting index
+  const visibleReviews = reviews.slice(index, index + 3);
+
+  const handleNext = () => {
+    if (index + 3 < reviews.length) {
+      setIndex(index + 3);
+    }
+  };
+
+  const handlePrev = () => {
+    if (index > 0) {
+      setIndex(index - 3);
+    }
+  };
+
   return (
     <div className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -66,8 +126,8 @@ const Review = () => {
         </h2>
 
         {/* review cards */}
-        <div className="mx-auto font-poppins mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3  no-scrollbar">
-          {reviews.map((review) => (
+        <div className="mx-auto font-poppins mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {visibleReviews.map((review) => (
             <div
               key={review.id}
               className="bg-white shadow-lg rounded-lg p-6 max-w-sm text-center border border-gray-200"
@@ -90,8 +150,18 @@ const Review = () => {
 
         {/* Navigation & Button */}
         <div className="flex justify-center items-center mt-6">
-          <MdChevronLeft className="text-3xl text-gray-600 cursor-pointer" />
-          <MdChevronRight className="text-3xl text-gray-600 cursor-pointer ml-4" />
+          <MdChevronLeft
+            className={`text-3xl cursor-pointer ${
+              index === 0 ? "text-gray-400" : "text-gray-600"
+            }`}
+            onClick={handlePrev}
+          />
+          <MdChevronRight
+            className={`text-3xl cursor-pointer ml-4 ${
+              index + 3 >= reviews.length ? "text-gray-400" : "text-gray-600"
+            }`}
+            onClick={handleNext}
+          />
         </div>
 
         <div className="flex justify-center mt-6">
