@@ -148,7 +148,7 @@ const Review = () => {
           ))}
         </div>
 
-        {/* Navigation & Button */}
+        {/* Navigation */}
         <div className="flex justify-center items-center mt-6">
           <MdChevronLeft
             className={`text-3xl cursor-pointer ${
