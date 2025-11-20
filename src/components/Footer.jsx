@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* About Section */}
         <div>
-          <h1 className="w-full text-5xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-yellow-200">
+          <h1 className="w-full text-5xl md:text-7xl font-bold mervale-font self-center whitespace-nowrap text-gold-200">
             Mr. Barber
           </h1>
           <p className="text-gray-600 mt-4 text-sm">
@@ -30,55 +30,45 @@ const Footer = () => {
 
         {/* Discover Section */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-700 mb-4">
-            Discover
-          </h3>
+          <h3 className="text-xl font-semibold text-gold-700 mb-4">Discover</h3>
           <ul className="text-gray-600 space-y-2">
-            <li className="hover:text-yellow-500 cursor-pointer">
-              Our Services
-            </li>
-            <li className="hover:text-yellow-500 cursor-pointer">
+            <li className="hover:text-gold-600 cursor-pointer">Our Services</li>
+            <li className="hover:text-gold-600 cursor-pointer">
               Meet Our Team
             </li>
-            <li className="hover:text-yellow-500 cursor-pointer">
+            <li className="hover:text-gold-600 cursor-pointer">
               Make an Appointment
             </li>
-            <li className="hover:text-yellow-500 cursor-pointer">
+            <li className="hover:text-gold-600 cursor-pointer">
               Need a Career?
             </li>
-            <li className="hover:text-yellow-500 cursor-pointer">
-              News & Blogs
-            </li>
+            <li className="hover:text-gold-600 cursor-pointer">News & Blogs</li>
           </ul>
         </div>
 
         {/* Quick Links Section */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-700 mb-4">
+          <h3 className="text-xl font-semibold text-gold-700 mb-4">
             Quick Links
           </h3>
           <ul className="text-gray-600 space-y-2">
-            <li className="hover:text-yellow-500 cursor-pointer">
-              Hair Cutting
-            </li>
-            <li className="hover:text-yellow-500 cursor-pointer">
+            <li className="hover:text-gold-600 cursor-pointer">Hair Cutting</li>
+            <li className="hover:text-gold-600 cursor-pointer">
               Shaving & Styling
             </li>
-            <li className="hover:text-yellow-500 cursor-pointer">
+            <li className="hover:text-gold-600 cursor-pointer">
               Hair Treatments
             </li>
-            <li className="hover:text-yellow-500 cursor-pointer">
+            <li className="hover:text-gold-600 cursor-pointer">
               Facial Treatments
             </li>
-            <li className="hover:text-yellow-500 cursor-pointer">Weddings</li>
+            <li className="hover:text-gold-600 cursor-pointer">Weddings</li>
           </ul>
         </div>
 
         {/* Contact Section */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-700 mb-4">
-            Contact
-          </h3>
+          <h3 className="text-xl font-semibold text-gold-700 mb-4">Contact</h3>
           <p className="text-gray-600 flex items-center gap-2">
             <FaMapMarkerAlt /> Colombo 03, Sri Lanka
           </p>
