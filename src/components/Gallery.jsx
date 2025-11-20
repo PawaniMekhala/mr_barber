@@ -42,7 +42,7 @@ const Gallery = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Text  */}
         <div className="mb-12">
-          <h2 className="text-7xl font-semibold font-playfair text-yellow-700 ">
+          <h2 className="text-7xl font-semibold font-playfair text-gold-700 ">
             Gallery...
           </h2>
         </div>
@@ -51,7 +51,7 @@ const Gallery = () => {
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 bg-yellow-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 bg-gold-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
           >
             ❮
           </button>
