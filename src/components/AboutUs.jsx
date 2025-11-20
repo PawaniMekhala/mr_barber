@@ -10,7 +10,7 @@ const AboutUs = () => {
             <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
                 {/* heading  */}
-                <h1 className="text-7xl font-semibold font-playfair text-yellow-700 leading-normal lg:text-start text-center">
+                <h1 className="text-7xl font-semibold font-playfair text-gold-700 leading-normal lg:text-start text-center">
                   About Us...
                 </h1>
                 <p className="text-gray-800 text-base font-normal font-poppins leading-relaxed lg:text-start text-center">
