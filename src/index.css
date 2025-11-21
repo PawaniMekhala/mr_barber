@@ -27,9 +27,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 input[type="time"] {
-  color: #876806; /* <-- same as text-gold-50 */
+  color: #876806;
 }
 
 input[type="date"] {
-  color: #876806; /* <-- same as text-gold-50 */
+  color: #876806; 
 }
