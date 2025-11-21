@@ -50,7 +50,7 @@ const OurTeam = () => {
     <div className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Team heading */}
-        <h2 className="text-7xl font-semibold font-playfair text-yellow-700 mb-14">
+        <h2 className="text-7xl font-semibold font-playfair text-gold-700 mb-14">
           Our Team...
         </h2>
         <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
@@ -71,7 +71,7 @@ const OurTeam = () => {
 
                 {/* Info content */}
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <h4 className="text-2xl font-semibold text-yellow-700">
+                  <h4 className="text-2xl font-semibold text-gold-700">
                     {name}
                   </h4>
                   <p className="text-lg text-white">~{position}</p> <br></br>
