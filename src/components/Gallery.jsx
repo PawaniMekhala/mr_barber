@@ -51,7 +51,7 @@ const Gallery = () => {
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 bg-gold-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 bg-gold-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gold-700 transition"
           >
             ❮
           </button>
@@ -75,7 +75,7 @@ const Gallery = () => {
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-10 bg-yellow-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-yellow-800 transition"
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-10 bg-gold-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gold-700 transition"
           >
             ❯
           </button>
