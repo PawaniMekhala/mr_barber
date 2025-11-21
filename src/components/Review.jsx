@@ -123,7 +123,7 @@ const Review = () => {
     <div className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <h2 className="text-7xl font-semibold font-playfair text-yellow-700 mb-14">
+        <h2 className="text-7xl font-semibold font-playfair text-gold-700 mb-14">
           Ratings and Reviews
         </h2>
 
@@ -140,7 +140,7 @@ const Review = () => {
                 className="w-14 h-14 mx-auto rounded-full mb-3"
               />
               <h3 className="text-lg font-semibold">{review.name}</h3>
-              <div className="flex justify-center my-2 text-yellow-500">
+              <div className="flex justify-center my-2 text-gold-500">
                 {[...Array(review.rating)].map((_, i) => (
                   <FaStar key={i} />
                 ))}
