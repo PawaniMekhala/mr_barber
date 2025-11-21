@@ -39,7 +39,7 @@ const FeedbackModal = ({ onClose }) => {
 
             <button
               type="submit"
-              className="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700"
+              className="px-4 py-2 bg-gold-600 text-white rounded hover:bg-gold-700"
             >
               Submit
             </button>
