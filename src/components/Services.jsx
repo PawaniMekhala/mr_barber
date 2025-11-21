@@ -21,7 +21,7 @@ const Services = () => {
     <div className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Services heading */}
-        <h2 className="text-7xl font-semibold font-playfair text-yellow-700 mb-14">
+        <h2 className="text-7xl font-semibold font-playfair text-gold-700 mb-14">
           Our Services...
         </h2>
         {/* Service cards */}
@@ -39,7 +39,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                 <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-                <h4 className="text-2xl font-medium text-white text-center transition-transform duration-300 ease-in-out hover:-translate-y-2 group-hover:text-yellow-700">
+                <h4 className="text-2xl font-medium text-white text-center transition-transform duration-300 ease-in-out hover:-translate-y-2 group-hover:text-gold-700">
                   {text}
                 </h4>
               </div>
