@@ -28,7 +28,7 @@ const AppointmentForm = () => {
       <input
         {...props}
         placeholder={label}
-        className="w-full bg-transparent border-b border-gold-600 placeholder-gold-700 text-gold-50 py-2 focus:outline-none focus:border-gold-400 transition"
+        className="w-full bg-transparent border-b border-gold-600 placeholder-gold-700 text-gold-300 py-2 focus:outline-none focus:border-gold-400 transition"
       />
     </div>
   );
@@ -126,7 +126,7 @@ const AppointmentForm = () => {
             <textarea
               rows="5"
               placeholder="Type Your Message"
-              className="w-full bg-transparent border border-gold-600 rounded-xl p-6 placeholder-gold-700 text-gold-50 focus:outline-none focus:ring-0 focus:border-gold-400 resize-none"
+              className="w-full bg-transparent border border-gold-600 rounded-xl p-6 placeholder-gold-700 text-gold-700 focus:outline-none focus:ring-0 focus:border-gold-400 resize-none"
             />
           </div>
 
