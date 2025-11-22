@@ -44,3 +44,21 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+/* Chrome, Edge, Safari */
+/* input[type="time"]::-webkit-datetime-edit-text,
+input[type="time"]::-webkit-datetime-edit-hour-field,
+input[type="time"]::-webkit-datetime-edit-minute-field,
+input[type="time"]::-webkit-datetime-edit-second-field {
+  color: #876806; 
+  opacity: 0.6;   
+} */
+
+/* Hide the built time placeholder */
+/* input[type="time"]::-webkit-datetime-edit {
+  color: transparent; 
+} */
+
+/* Show it when user focuses */
+/* input[type="time"]:focus::-webkit-datetime-edit {
+  color: #fefce8; 
+} */
