@@ -105,13 +105,40 @@ const AppointmentForm = () => {
             </div>
 
             {/* Time input */}
-            <div className="relative w-full">
+            {/* <div className="relative w-full">
               <label className="sr-only">Appointment Time</label>
               <input
                 ref={timeRef}
                 type="time"
                 className="w-full bg-transparent border-b border-gold-600 py-2 pr-8 placeholder-gold-700 text-gold-50 focus:outline-none focus:border-gold-400
                 [color-scheme:dark]"
+              />
+              <ClockIcon
+                onClick={openTimePicker}
+                className="w-5 h-5 absolute right-0 top-2 text-gold-600 cursor-pointer"
+              />
+            </div> */}
+
+            <div className="relative w-full">
+              <span
+                className="absolute left-0 top-2 text-gold-700 pointer-events-none"
+                id="timePlaceholder"
+              >
+                Select time
+              </span>
+
+              <input
+                ref={timeRef}
+                type="time"
+                className="w-full bg-transparent border-b border-gold-600 py-2 pr-8 text-gold-50 focus:outline-none focus:border-gold-400 [color-scheme:dark]"
+                onChange={(e) => {
+                  const placeholder =
+                    document.getElementById("timePlaceholder");
+                  if (placeholder)
+                    placeholder.style.display = e.target.value
+                      ? "none"
+                      : "block";
+                }}
               />
               <ClockIcon
                 onClick={openTimePicker}
