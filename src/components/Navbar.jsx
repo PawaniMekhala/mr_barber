@@ -8,11 +8,11 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { id: 1, text: "Home" },
-    { id: 2, text: "About Us" },
-    { id: 3, text: "Services" },
-    { id: 4, text: "Pricing" },
-    { id: 5, text: "Reviews" },
+    { id: 1, text: "Home", link: "#home" },
+    { id: 2, text: "About Us", link: "#about" },
+    { id: 3, text: "Services", link: "#services" },
+    { id: 4, text: "Pricing", link: "#pricing" },
+    { id: 5, text: "Reviews", link: "#review" },
   ];
 
   const appointmentBtnStyle = {
@@ -51,7 +51,7 @@ const Navbar = () => {
                 key={item.id}
                 className="py-2 px-6 hover:bg-gold-600 font-poppins rounded-xl m-2 cursor-pointer duration-300 hover:text-black text-left whitespace-nowrap"
               >
-                {item.text}
+                <a href={item.link}>{item.text}</a>
               </li>
             ))}
           </ul>
@@ -103,8 +103,11 @@ const Navbar = () => {
             <li
               key={item.id}
               className="p-4 border-b border-gray-600 cursor-pointer hover:bg-neutral-800"
+              onClick={() => {
+                setNav(false); // close menu
+              }}
             >
-              {item.text}
+              <a href={item.link}>{item.text}</a>
             </li>
           ))}
         </ul>
