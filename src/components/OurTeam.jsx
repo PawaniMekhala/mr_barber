@@ -47,7 +47,7 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="py-24 ">
+    <section id="team" className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Team heading */}
         <h2 className="text-7xl font-semibold font-playfair text-gold-700 mb-14">
@@ -82,7 +82,7 @@ const OurTeam = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

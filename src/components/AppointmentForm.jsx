@@ -34,7 +34,10 @@ const AppointmentForm = () => {
   );
 
   return (
-    <div className="min-h-screen flex items-start justify-center bg-[#0f0f0f] px-6 py-16">
+    <section
+      id="appoinment"
+      className="min-h-screen flex items-start justify-center bg-[#0f0f0f] px-6 py-16"
+    >
       <div className="max-w-3xl w-full">
         <h1 className="text-center font-playfair text-3xl md:text-4xl text-gold-700 mb-12">
           Make Appointment
@@ -175,7 +178,7 @@ const AppointmentForm = () => {
           </span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

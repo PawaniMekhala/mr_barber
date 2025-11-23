@@ -38,7 +38,7 @@ const Gallery = () => {
   );
 
   return (
-    <div className="py-24 relative">
+    <section id="gallery" className="py-24 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Text  */}
         <div className="mb-12">
@@ -81,7 +81,7 @@ const Gallery = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

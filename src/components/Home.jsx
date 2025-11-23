@@ -5,7 +5,10 @@ import Home3 from "../assets/home_img/home3.jpg";
 
 const Home = () => {
   return (
-    <section className="relative bg-neutral-900 text-white min-h-screen flex flex-col px-4 sm:px-10 py-16 overflow-hidden">
+    <section
+      id="home"
+      className="relative bg-neutral-900 text-white min-h-screen flex flex-col px-4 sm:px-10 py-16 overflow-hidden"
+    >
       {/* Animations & reduced-motion support */}
       <style>{`
         @keyframes float-main {

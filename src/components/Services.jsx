@@ -18,35 +18,37 @@ const Services = () => {
   ];
 
   return (
-    <div className="py-24 ">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Services heading */}
-        <h2 className="text-7xl font-semibold font-playfair text-gold-700 mb-14">
-          Our Services...
-        </h2>
-        {/* Service cards */}
-        <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-          {serviceItem.map(({ text, image }, index) => {
-            return (
-              <div
-                key={index}
-                className="group relative isolate flex flex-col justify-end items-center overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-              >
-                <img
-                  src={image}
-                  alt={text}
-                  className="absolute inset-0 -z-10 h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-                <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
-                <h4 className="text-2xl font-medium text-white text-center transition-transform duration-300 ease-in-out hover:-translate-y-2 group-hover:text-gold-700">
-                  {text}
-                </h4>
-              </div>
-            );
-          })}
+    <div>
+      <section id="services" className="py-24 ">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Services heading */}
+          <h2 className="text-7xl font-semibold font-playfair text-gold-700 mb-14">
+            Our Services...
+          </h2>
+          {/* Service cards */}
+          <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
+            {serviceItem.map(({ text, image }, index) => {
+              return (
+                <div
+                  key={index}
+                  className="group relative isolate flex flex-col justify-end items-center overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+                >
+                  <img
+                    src={image}
+                    alt={text}
+                    className="absolute inset-0 -z-10 h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                  <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                  <h4 className="text-2xl font-medium text-white text-center transition-transform duration-300 ease-in-out hover:-translate-y-2 group-hover:text-gold-700">
+                    {text}
+                  </h4>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

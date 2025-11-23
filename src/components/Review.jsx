@@ -120,7 +120,7 @@ const Review = () => {
   };
 
   return (
-    <div className="py-24 ">
+    <section id="review" className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <h2 className="text-7xl font-semibold font-playfair text-gold-700 mb-14">
@@ -176,7 +176,7 @@ const Review = () => {
           {showForm && <FeedbackModal onClose={() => setShowForm(false)} />}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
