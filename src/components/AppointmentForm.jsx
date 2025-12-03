@@ -170,13 +170,6 @@ const AppointmentForm = () => {
             </button>
           </div>
         </form>
-
-        {/* bottom arrow */}
-        <div className="fixed right-6 bottom-6 text-gold-600">
-          <span style={{ transform: "rotate(90deg)", display: "inline-block" }}>
-            ⌃
-          </span>
-        </div>
       </div>
     </section>
   );
