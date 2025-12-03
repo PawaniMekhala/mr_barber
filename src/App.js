@@ -9,6 +9,7 @@ import Pricing from "./components/Pricing";
 // import Test from "./components/Test";
 import Review from "./components/Review";
 import AppointmentForm from "./components/AppointmentForm";
+import BackToHomeArrow from "./components/BackToHomeArrow";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <AppointmentForm/>
       {/* <Test/> */}
       <Footer />
+      <BackToHomeArrow />
     </div>
   );
 }
