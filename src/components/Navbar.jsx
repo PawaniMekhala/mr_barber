@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -78,12 +79,13 @@ const Navbar = () => {
               Appointment
             </button>
             {/* Staff Button */}
-            <button
+            <Link
+              to="/staff"
               className="px-6 py-2 rounded-md font-semibold"
               style={staffBtnStyle}
             >
               Staff
-            </button>
+            </Link>
           </div>
         </div>
 
