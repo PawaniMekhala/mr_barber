@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -10,25 +11,42 @@ import Pricing from "./components/Pricing";
 import Review from "./components/Review";
 import AppointmentForm from "./components/AppointmentForm";
 import BackToHomeArrow from "./components/BackToHomeArrow";
-
+import Staff from "./components/Staff";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Home />
-      <AboutUs/>
-      <OurTeam/>
-      <Services/>
-      <Pricing/>
-      <Gallery/>
-      <Review/>
-      <AppointmentForm/>
-      {/* <Test/> */}
+    <>
+   <Navbar />
+      <Routes>
+        {/* HOME PAGE */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              <AboutUs />
+              <OurTeam />
+              <Services />
+              <Pricing />
+              <Gallery />
+              <Review />
+              <AppointmentForm />
+            </>
+          }
+        />
+
+        {/* STAFF PAGE */}
+        <Route path="/staff" element={<Staff />} />
+
+        {/* Optional: Appointment Page */}
+        {/* <Route path="/appointment" element={<AppointmentForm />} /> */}
+      </Routes>
+
       <Footer />
       <BackToHomeArrow />
-    </div>
+      </>
   );
+
 }
 
 export default App;
