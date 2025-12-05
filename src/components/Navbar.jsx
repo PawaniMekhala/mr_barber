@@ -51,7 +51,7 @@ const Navbar = () => {
             Mr. Barber
           </div>
 
-          {/* Desktop Navigation Links */}
+          {/* Desktop Navbar*/}
           <ul className="hidden md:flex items-center space-x-4 lg:space-x-5 text-sm lg:text-base font-medium">
             {navItems.map((item) => (
               <li
@@ -63,7 +63,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Mobile Navigation toggle */}
+          {/* Mobile Nav toggle */}
           <div
             onClick={handleNav}
             className="block md:hidden cursor-pointer z-50"
@@ -79,7 +79,7 @@ const Navbar = () => {
           {isStaffPage ? (
             //staff page button bar
             <div className="flex space-x-4">
-              {/* Appointment Button */}
+              {/* Appointment Button  */}
               <Link
                 to="/"
                 className="px-6 py-2 rounded-md font-semibold"
