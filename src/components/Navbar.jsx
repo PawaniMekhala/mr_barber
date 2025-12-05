@@ -1,20 +1,26 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  // detects which page you are on
+  const location = useLocation();
+
   const handleNav = () => {
     setNav(!nav);
   };
 
   const navItems = [
-    { id: 1, text: "Home", link: "#home" },
-    { id: 2, text: "About Us", link: "#about" },
-    { id: 3, text: "Services", link: "#services" },
-    { id: 4, text: "Pricing", link: "#pricing" },
-    { id: 5, text: "Reviews", link: "#review" },
+    { id: 1, text: "Home", link: "/" },
+    { id: 2, text: "About Us", link: "/about" },
+    { id: 3, text: "Services", link: "/services" },
+    { id: 4, text: "Pricing", link: "/pricing" },
+    { id: 5, text: "Reviews", link: "/review" },
   ];
+
+  // Detect if user is on staff page
+  const isStaffPage = location.pathname === "/staff";
 
   const appointmentBtnStyle = {
     background: "linear-gradient(to bottom, #A68B2F 0%, #705B1E 100%)",
@@ -35,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className="bg-neutral-900 text-white relative">
       <div className="overflow-x-auto">
-        {/* Logo and Navigation Links */}
+        {/* Main nav bar */}
         <div className="w-full max-w-7xl mx-auto flex justify-between items-center h-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 flex-nowrap">
           {/* Logo */}
           <div
@@ -57,7 +63,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* Mobile Navigation Icon */}
+          {/* Mobile Navigation toggle */}
           <div
             onClick={handleNav}
             className="block md:hidden cursor-pointer z-50"
@@ -68,25 +74,48 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Bottom Bar: Action Buttons */}
+        {/* Bottom Bar (changes based on page) */}
         <div className="w-full h-16 px-4 flex justify-end items-center border-t border-gray-900 md:border-t-0">
-          <div className="flex space-x-4">
-            {/* Appointment Button */}
-            <button
-              className="px-6 py-2 rounded-md font-semibold"
-              style={appointmentBtnStyle}
-            >
-              Appointment
-            </button>
-            {/* Staff Button */}
-            <Link
-              to="/staff"
-              className="px-6 py-2 rounded-md font-semibold"
-              style={staffBtnStyle}
-            >
-              Staff
-            </Link>
-          </div>
+          {isStaffPage ? (
+            //staff page button bar
+            <div className="flex space-x-4">
+              {/* Appointment Button */}
+              <Link
+                to="/"
+                className="px-6 py-2 rounded-md font-semibold"
+                style={appointmentBtnStyle}
+              >
+                Home
+              </Link>
+              {/* Staff Button */}
+              <Link
+                to="/login"
+                className="px-6 py-2 rounded-md font-semibold"
+                style={staffBtnStyle}
+              >
+                Login
+              </Link>
+            </div>
+          ) : (
+            //home page action bar
+            <div className="flex space-x-4">
+              {/* Appointment Button */}
+              <button
+                className="px-6 py-2 rounded-md font-semibold"
+                style={appointmentBtnStyle}
+              >
+                Appointment
+              </button>
+              {/* Staff Button */}
+              <Link
+                to="/staff"
+                className="px-6 py-2 rounded-md font-semibold"
+                style={staffBtnStyle}
+              >
+                Staff
+              </Link>
+            </div>
+          )}
         </div>
 
         {/* Gold Separator Line */}
