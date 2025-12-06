@@ -39,6 +39,15 @@ const Navbar = () => {
     fontSize: "16px",
   };
 
+  const loginBtnStyle = {
+    background: "linear-gradient(to bottom, #C29400 0%, #876806 100%)",
+    boxShadow: "0 4px 4px 0 rgba(135, 104, 6, 0.36)",
+    color: "#101010",
+    fontSize: "18px",
+    borderRadius: "16px",
+    transition: "none", // instant—no fade animation
+  };
+
   return (
     <nav className="bg-neutral-900 text-white relative">
       <div className="overflow-x-auto">
@@ -88,11 +97,11 @@ const Navbar = () => {
               >
                 <IoIosNotifications size={22} />
               </Link>
-              {/* Staff Button */}
+              {/* login Button */}
               <Link
                 to="/login"
                 className="px-6 py-2 rounded-md font-semibold"
-                style={staffBtnStyle}
+                style={loginBtnStyle}
               >
                 Login
               </Link>
