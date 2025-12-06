@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { IoIosNotifications } from "react-icons/io";
+import { IoNotifications } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -93,9 +93,9 @@ const Navbar = () => {
               <Link
                 to="/"
                 className="px-6 py-2 rounded-md font-semibold"
-                style={appointmentBtnStyle}
+                // style={appointmentBtnStyle}
               >
-                <IoIosNotifications size={22} />
+                <IoNotifications size={27} color="#876806" />
               </Link>
               {/* login Button */}
               <Link
