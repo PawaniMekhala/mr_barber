@@ -32,11 +32,19 @@ const Navbar = () => {
   };
 
   const staffBtnStyle = {
-    background: "linear-gradient(to bottom, #9B822A 0%, #68551A 100%)",
-    boxShadow:
-      "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4)",
-    color: "white",
-    fontSize: "16px",
+    width: "98px",
+    height: "50px",
+    background: "linear-gradient(180deg, #C29400 0%, #876806 62%)",
+    boxShadow: "0px 4px 4px 0px rgba(135, 104, 6, 0.36)",
+    borderRadius: "15px",
+    opacity: 1,
+    transition: "none",
+    color: "#101010",
+    fontSize: "18px",
+    fontFamily: "Inter, sans-serif",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 
   const loginBtnStyle = {
