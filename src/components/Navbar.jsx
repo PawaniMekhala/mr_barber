@@ -24,11 +24,23 @@ const Navbar = () => {
   const isStaffPage = location.pathname === "/staff";
 
   const appointmentBtnStyle = {
-    background: "linear-gradient(to bottom, #A68B2F 0%, #705B1E 100%)",
-    boxShadow:
-      "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4)",
-    color: "white",
-    fontSize: "16px", // Slightly smaller on the bottom bar
+    width: "127px",
+    height: "50px",
+    background: "linear-gradient(180deg, #C29400 0%, #876806 62.15%)",
+    boxShadow: "0px 4px 4px 0px #8768065C",
+    opacity: 1,
+    borderRadius: "15px",
+    color: "#FFFFFF",
+    fontFamily: "Poppins, sans-serif",
+    fontWeight: 500,
+    fontSize: "16px",
+    lineHeight: "100%",
+
+    // layout
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    transition: "none",
   };
 
   const staffBtnStyle = {
