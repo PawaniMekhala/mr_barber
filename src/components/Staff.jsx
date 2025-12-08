@@ -13,41 +13,41 @@ export default function Staff() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-yellow-500 pt-20">
+    <div className="min-h-screen bg-black text-gold-500 pt-20">
       {/* STAFF CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto p-5">
         {staff.map((s, i) => (
           <div
             key={i}
-            className="flex items-center justify-between p-5 rounded-xl border-2 border-gold-700 bg-black hover:scale-105 transition-transform duration-300"
+            className="rounded-2xl p-[2px]"
             style={{
-              borderRadius: "16px",
-              borderImageSource:
-                "linear-gradient(180deg, #C29400 0%, #876806 52.1%)",
-              borderImageSlice: 1,
+              background: "linear-gradient(180deg, #C29400 0%, #876806 52.1%)",
             }}
           >
-            {/* Left Side - Image */}
-            <div className="flex items-center gap-4">
-              <img
-                src={s.img}
-                className="w-20 h-20 rounded-full object-cover border-2 border-gold-700"
-                alt={s.name}
-              />
+            <div className="flex items-center justify-between p-5 bg-black rounded-2xl hover:scale-105 transition-transform duration-300">
+              {/* Left Side - Image */}
+              <div className="flex items-center gap-4">
+                <img
+                  src={s.img}
+                  className="w-20 h-20 rounded-full object-cover"
+                  alt={s.name}
+                />
 
-              {/* Name + Appointments */}
-              <div>
-                <p className="text-xl font-semibold text-yellow-600">
-                  {s.name}
-                </p>
-                <p className="text-sm text-gray-400">
-                  {s.appointments} new appointments
-                </p>
+                {/* Name + Appointments */}
+                <div>
+                  <p className="text-xl font-semibold text-gold-600">
+                    {s.name}
+                  </p>
+                  <br></br>
+                  <p className="text-sm text-gray-400">
+                    {s.appointments} new appointments
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Arrow Icon */}
-            <span className="text-3xl text-yellow-600">{">>"}</span>
+              {/* Arrow Icon */}
+              <span className="text-3xl text-yellow-600">{">>"}</span>
+            </div>
           </div>
         ))}
       </div>
