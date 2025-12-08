@@ -3,6 +3,7 @@ import Staff1 from "../assets/staff_img/stf1.jpg";
 import Staff2 from "../assets/staff_img/stf2.jpg";
 import Staff3 from "../assets/staff_img/stf3.jpg";
 import Staff4 from "../assets/staff_img/stf4.jpg";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 export default function Staff() {
   const staff = [
@@ -19,7 +20,7 @@ export default function Staff() {
         {staff.map((s, i) => (
           <div
             key={i}
-            className="rounded-2xl p-[2px]"
+            className="rounded-2xl p-[1px]"
             style={{
               background: "linear-gradient(180deg, #C29400 0%, #876806 52.1%)",
             }}
@@ -35,18 +36,20 @@ export default function Staff() {
 
                 {/* Name + Appointments */}
                 <div>
-                  <p className="text-xl font-semibold text-gold-600">
+                  <p className="text-xl font-medium font-poppins text-gold-700">
                     {s.name}
                   </p>
                   <br></br>
-                  <p className="text-sm text-gray-400">
+                  <p className="text-sm text-white font-poppins">
                     {s.appointments} new appointments
                   </p>
                 </div>
               </div>
 
               {/* Arrow Icon */}
-              <span className="text-3xl text-yellow-600">{">>"}</span>
+              <span className="text-3xl text-yellow-700">
+                <MdOutlineKeyboardDoubleArrowRight />
+              </span>
             </div>
           </div>
         ))}
