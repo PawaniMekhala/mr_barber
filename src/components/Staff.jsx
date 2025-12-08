@@ -19,20 +19,35 @@ export default function Staff() {
         {staff.map((s, i) => (
           <div
             key={i}
-            className="border border-yellow-700 rounded-xl p-4 flex items-center gap-4 hover:scale-105 transition"
+            className="flex items-center justify-between p-5 rounded-xl border-2 border-gold-700 bg-black hover:scale-105 transition-transform duration-300"
+            style={{
+              borderRadius: "16px",
+              borderImageSource:
+                "linear-gradient(180deg, #C29400 0%, #876806 52.1%)",
+              borderImageSlice: 1,
+            }}
           >
-            <img
-              src={s.img}
-              className="w-16 h-16 rounded-full object-cover"
-              alt=""
-            />
-            <div className="flex-1">
-              <p className="font-bold">{s.name}</p>
-              <p className="text-sm text-gray-400">
-                {s.appointments} new appointments
-              </p>
+            {/* Left Side - Image */}
+            <div className="flex items-center gap-4">
+              <img
+                src={s.img}
+                className="w-20 h-20 rounded-full object-cover border-2 border-gold-700"
+                alt={s.name}
+              />
+
+              {/* Name + Appointments */}
+              <div>
+                <p className="text-xl font-semibold text-yellow-600">
+                  {s.name}
+                </p>
+                <p className="text-sm text-gray-400">
+                  {s.appointments} new appointments
+                </p>
+              </div>
             </div>
-            <span className="text-xl">➤</span>
+
+            {/* Arrow Icon */}
+            <span className="text-3xl text-yellow-600">{">>"}</span>
           </div>
         ))}
       </div>
