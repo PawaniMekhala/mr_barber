@@ -5,6 +5,7 @@ import Staff2 from "../assets/staff_img/stf2.jpg";
 import Staff3 from "../assets/staff_img/stf3.jpg";
 import Staff4 from "../assets/staff_img/stf4.jpg";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function Staff() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export default function Staff() {
   ];
 
   return (
-    <div className="min-h-screen bg-black pt-20">
+    <div className="min-h-screen bg-black pt-20 pb-20">
       {/* STAFF CARDS */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto gap-8 px-6">
         {staff.map((s, i) => (
@@ -61,26 +62,32 @@ export default function Staff() {
       </div>
 
       {/* STAFF LOGIN */}
-      <h2 className="text-center mt-12 text-2xl font-semibold">Staff Login</h2>
+      <div>
+        <h2 className="text-center mt-12 text-2xl font-semibold text-gold-700">
+          Staff Login
+        </h2>
 
-      <div className="border border-yellow-700 max-w-md mx-auto mt-6 p-8 rounded-xl">
-        <div className="text-center text-4xl mb-4">👤</div>
+        <div className="border border-yellow-700 max-w-md mx-auto mt-6 p-8 rounded-xl">
+          <div className="text-center text-4xl mb-4 text-gold-700">
+            <FaUserCircle />
+          </div>
 
-        <input
-          type="text"
-          placeholder="Username"
-          className="w-full p-3 bg-black border border-yellow-700 rounded mb-4"
-        />
+          <input
+            type="text"
+            placeholder="Username"
+            className="w-full p-3 bg-black border border-yellow-700 rounded mb-4"
+          />
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full p-3 bg-black border border-yellow-700 rounded mb-4"
-        />
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full p-3 bg-black border border-yellow-700 rounded mb-4"
+          />
 
-        <button className="w-full bg-yellow-600 py-2 rounded text-black font-bold">
-          Login
-        </button>
+          <button className="w-full bg-yellow-600 py-2 rounded text-black font-bold">
+            Login
+          </button>
+        </div>
       </div>
       {/* .div$*4 for 4 divs shortcut*/}
     </div>
