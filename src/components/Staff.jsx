@@ -5,7 +5,7 @@ import Staff2 from "../assets/staff_img/stf2.jpg";
 import Staff3 from "../assets/staff_img/stf3.jpg";
 import Staff4 from "../assets/staff_img/stf4.jpg";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
-import { FaUserCircle } from "react-icons/fa";
+import { FaUser, FaLock, FaGoogle, FaFacebookF, FaApple } from "react-icons/fa";
 
 export default function Staff() {
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ export default function Staff() {
       </div>
 
       {/* STAFF LOGIN */}
-      <div>
+      {/* <div>
         <h2 className="text-center mt-12 text-2xl font-semibold text-gold-700">
           Staff Login
         </h2>
@@ -88,8 +88,56 @@ export default function Staff() {
             Login
           </button>
         </div>
-      </div>
+      </div> */}
       {/* .div$*4 for 4 divs shortcut*/}
+
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <div className="w-full max-w-md border border-yellow-600 rounded-2xl p-8 shadow-lg">
+          {/* Title */}
+          <h2 className="text-center text-yellow-600 text-2xl font-semibold mb-6">
+            Staff Login
+          </h2>
+
+          {/* Avatar */}
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-16 flex items-center justify-center rounded-full border border-yellow-600">
+              <FaUser className="text-yellow-600 text-2xl" />
+            </div>
+          </div>
+
+          {/* Username */}
+          <div className="flex items-center border-b border-yellow-600 mb-6">
+            <FaUser className="text-yellow-600 mr-3" />
+            <input
+              type="text"
+              placeholder="Username"
+              className="w-full bg-transparent text-yellow-600 placeholder-yellow-600 outline-none py-2"
+            />
+          </div>
+
+          {/* Password */}
+          <div className="flex items-center border-b border-yellow-600 mb-8">
+            <FaLock className="text-yellow-600 mr-3" />
+            <input
+              type="password"
+              placeholder="Password"
+              className="w-full bg-transparent text-yellow-600 placeholder-yellow-600 outline-none py-2"
+            />
+          </div>
+
+          {/* Login Button */}
+          <button className="w-full bg-yellow-700 hover:bg-yellow-600 text-black font-semibold py-2 rounded-lg transition">
+            Login
+          </button>
+
+          {/* Social Login */}
+          <div className="flex justify-center gap-6 mt-6">
+            <FaGoogle className="text-xl text-white cursor-pointer hover:text-yellow-600" />
+            <FaFacebookF className="text-xl text-white cursor-pointer hover:text-yellow-600" />
+            <FaApple className="text-xl text-white cursor-pointer hover:text-yellow-600" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
