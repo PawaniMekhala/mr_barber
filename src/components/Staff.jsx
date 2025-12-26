@@ -62,46 +62,52 @@ export default function Staff() {
       </div>
 
       {/* STAFF LOGIN */}
-      {/* <div>
-        <h2 className="text-center mt-12 text-2xl font-semibold text-gold-700">
-          Staff Login
-        </h2>
-
-        <div className="border border-yellow-700 max-w-md mx-auto mt-6 p-8 rounded-xl">
-          <div className="text-center text-4xl mb-4 text-gold-700">
-            <FaUserCircle />
-          </div>
-
-          <input
-            type="text"
-            placeholder="Username"
-            className="w-full p-3 bg-black border border-yellow-700 rounded mb-4"
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            className="w-full p-3 bg-black border border-yellow-700 rounded mb-4"
-          />
-
-          <button className="w-full bg-yellow-600 py-2 rounded text-black font-bold">
-            Login
-          </button>
-        </div>
-      </div> */}
       {/* .div$*4 for 4 divs shortcut*/}
-
-      <div className="min-h-screen flex items-center justify-center bg-black">
-        <div className="w-full max-w-md border border-yellow-600 rounded-2xl p-8 shadow-lg">
-          {/* Title */}
-          <h2 className="text-center text-yellow-600 text-2xl font-semibold mb-6">
-            Staff Login
-          </h2>
-
+      {/* Title */}
+      <h2
+        className="mx-auto
+    mt-12
+    w-[197px]
+    h-[53px]
+    text-center
+    font-playfair
+    text-[40px]
+    font-medium
+    leading-[100%]
+    tracking-[0%] text-gold-700"
+      >
+        Staff Login
+      </h2>
+      <div className="flex items-center justify-center bg-black">
+        <div
+          className="
+    w-[529px]
+    h-[511px]
+    border
+    border-yellow-600
+    rounded-2xl
+    p-8
+    mt-6
+    shadow-lg
+    bg-black
+    flex
+    flex-col
+    justify-center
+  "
+        >
           {/* Avatar */}
-          <div className="flex justify-center mb-6">
-            <div className="w-16 h-16 flex items-center justify-center rounded-full border border-yellow-600">
-              <FaUser className="text-yellow-600 text-2xl" />
+          <div className="flex justify-center mb-10">
+            <div
+              className="
+    w-[64px] h-[64px]
+    sm:w-[74px] sm:h-[74px]
+    rounded-full
+    border-2
+    border-gold-700
+    flex items-center justify-center
+  "
+            >
+              <FaUser className="text-yellow-600 text-[24px] sm:text-[28px]" />
             </div>
           </div>
 
