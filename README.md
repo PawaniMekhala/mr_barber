@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+git command
+1. Create a new branch
+git checkout -b my-feature
+
+2. Add & commit changes
+git add .
+git commit -m "Added new feature"
+
+3. Push to remote
+git push origin my-feature
+
+4. Create Pull Request
+
+Go to GitHub (or similar platform):
+
+You’ll see a button: “Compare & pull request”
+Click it
+Add description
+Submit PR

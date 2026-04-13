@@ -14,10 +14,10 @@ const Navbar = () => {
 
   const navItems = [
     { id: 1, text: "Home", link: "/" },
-    { id: 2, text: "About Us", link: "/about" },
-    { id: 3, text: "Services", link: "/services" },
-    { id: 4, text: "Pricing", link: "/pricing" },
-    { id: 5, text: "Reviews", link: "/review" },
+    { id: 2, text: "About Us", link: "#about" },
+    { id: 3, text: "Services", link: "#services" },
+    { id: 4, text: "Pricing", link: "#pricing" },
+    { id: 5, text: "Reviews", link: "#review" },
   ];
 
   // Detect if user is on staff page
