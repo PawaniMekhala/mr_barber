@@ -11,10 +11,10 @@ export default function Staff() {
   const navigate = useNavigate();
 
   const staff = [
-    { name: "Shan Perera", appointments: 6, img: Staff1 },
-    { name: "Roshan Silva", appointments: 12, img: Staff2 },
-    { name: "Nadun Peries", appointments: 7, img: Staff3 },
-    { name: "Kasun Fernando", appointments: 3, img: Staff4 },
+    { id: 1, name: "Shan Perera", appointments: 6, img: Staff1 },
+    { id: 2, name: "Roshan Silva", appointments: 12, img: Staff2 },
+    { id: 3, name: "Nadun Peries", appointments: 7, img: Staff3 },
+    { id: 4, name: "Kasun Fernando", appointments: 3, img: Staff4 },
   ];
 
   return (
