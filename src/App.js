@@ -12,6 +12,7 @@ import Review from "./components/Review";
 import AppointmentForm from "./components/AppointmentForm";
 import BackToHomeArrow from "./components/BackToHomeArrow";
 import Staff from "./components/Staff";
+import StaffDetails from "./components/StaffDetails";
 
 function App() {
   return (
@@ -31,12 +32,15 @@ function App() {
               <Gallery />
               <Review />
               <AppointmentForm />
+              {/* <StaffDetails /> */}
             </>
           }
         />
 
+
         {/* STAFF PAGE */}
         <Route path="/staff" element={<Staff />} />
+        <Route path="/staff/:id" element={<StaffDetails />} />
 
         {/* Optional: Appointment Page */}
         {/* <Route path="/appointment" element={<AppointmentForm />} /> */}
