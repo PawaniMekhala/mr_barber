@@ -25,7 +25,7 @@ export default function Staff() {
           <div
             key={i}
             // navigate to staff details page
-            onClick={() => navigate("/staff1")}
+            onClick={() => navigate(`/staff/${s.id}`)}
             className="cursor-pointer rounded-2xl p-[2px] overflow-hidden"
             style={{
               background: "linear-gradient(180deg, #C29400 0%, #876806 52.1%)",
