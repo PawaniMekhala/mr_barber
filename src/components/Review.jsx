@@ -4,7 +4,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Gallery1 from "../assets/galary_img/gallery1.jpg";
 import Gallery2 from "../assets/galary_img/gallery2.jpg";
 import Gallery3 from "../assets/galary_img/gallery3.jpg";
-import FeedbackModal from "../Modals/FeedbackModal";
+import FeedbackModal from "../modals/FeedbackModal";
 
 const reviews = [
   {
