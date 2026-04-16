@@ -88,7 +88,11 @@ const Navbar = () => {
                 key={item.id}
                 className="py-2 px-6 hover:bg-gold-600 font-poppins rounded-xl m-2 cursor-pointer duration-300 hover:text-black text-left whitespace-nowrap"
               >
-                <a href={item.link}>{item.text}</a>
+                {item.link.startsWith("#") ? (
+                  <a href={item.link}>{item.text}</a>
+                ) : (
+                  <Link to={item.link}>{item.text}</Link>
+                )}
               </li>
             ))}
           </ul>
@@ -168,7 +172,11 @@ const Navbar = () => {
                 setNav(false); // close menu
               }}
             >
-              <a href={item.link}>{item.text}</a>
+              {item.link.startsWith("#") ? (
+                <a href={item.link}>{item.text}</a>
+              ) : (
+                <Link to={item.link}>{item.text}</Link>
+              )}
             </li>
           ))}
         </ul>
