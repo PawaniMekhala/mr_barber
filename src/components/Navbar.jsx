@@ -23,25 +23,25 @@ const Navbar = () => {
   // Detect if user is on staff page
   const isStaffPage = location.pathname === "/staff";
 
-  const appointmentBtnStyle = {
-    width: "127px",
-    height: "50px",
-    background: "linear-gradient(180deg, #C29400 0%, #876806 62.15%)",
-    boxShadow: "0px 4px 4px 0px #8768065C",
-    opacity: 1,
-    borderRadius: "15px",
-    color: "#FFFFFF",
-    fontFamily: "Poppins, sans-serif",
-    fontWeight: 500,
-    fontSize: "16px",
-    lineHeight: "100%",
+  // const appointmentBtnStyle = {
+  //   width: "127px",
+  //   height: "50px",
+  //   background: "linear-gradient(180deg, #C29400 0%, #876806 62.15%)",
+  //   boxShadow: "0px 4px 4px 0px #8768065C",
+  //   opacity: 1,
+  //   borderRadius: "15px",
+  //   color: "#FFFFFF",
+  //   fontFamily: "Poppins, sans-serif",
+  //   fontWeight: 500,
+  //   fontSize: "16px",
+  //   lineHeight: "100%",
 
-    // layout
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    transition: "none",
-  };
+  //   // layout
+  //   display: "flex",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   transition: "none",
+  // };
 
   const staffBtnStyle = {
     width: "98px",
@@ -134,12 +134,14 @@ const Navbar = () => {
             //home page action bar
             <div className="flex space-x-4">
               {/* Appointment Button */}
-              <button
+              {/* <button
                 className="px-6 py-2 rounded-md font-semibold"
                 style={appointmentBtnStyle}
-              >
+              > */}
+              <button className="w-[127px] h-[50px] rounded-[15px] text-white flex items-center justify-center bg-gradient-to-b from-[#C29400] to-[#876806] shadow-md">
                 Appointment
               </button>
+
               {/* Staff Button */}
               <Link
                 to="/staff"
