@@ -21,7 +21,8 @@ const Navbar = () => {
   ];
 
   // Detect if user is on staff page
-  const isStaffPage = location.pathname === "/staff";
+  // const isStaffPage = location.pathname === "/staff";
+  const isStaffPage = location.pathname.startsWith("/staff");
 
   // const appointmentBtnStyle = {
   //   width: "127px",
