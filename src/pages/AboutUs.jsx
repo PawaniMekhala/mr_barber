@@ -29,7 +29,7 @@ const AboutUs = () => {
             <img
               className="lg:mx-0 mx-auto h-full rounded-3xl object-cover shadow-xl shadow-blue-gray-600"
               src={Owner}
-              alt="about Us"
+              alt="Owner of Mr. Barber salon"
             />
             <div className="mt-2 font-normal text-sm font-poppins text-gray-600">
               "To be the go-to destination for timeless grooming excellence."
