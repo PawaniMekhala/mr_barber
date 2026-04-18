@@ -31,11 +31,11 @@ const AboutUs = () => {
               src={Owner}
               alt="Owner of Mr. Barber salon"
             />
-            <div className="mt-2 font-normal text-sm font-poppins text-gray-600">
+            <blockquote className="mt-2 text-sm font-poppins text-gray-600 italic">
               "To be the go-to destination for timeless grooming excellence."
               <br />
-              Owner-Mr. T.B.Perera
-            </div>
+              <span className="not-italic">— Owner, Mr. T.B. Perera</span>
+            </blockquote>
           </div>
         </div>
       </div>
