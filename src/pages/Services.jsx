@@ -8,13 +8,13 @@ import Service6 from "../assets/services_img/service6.jpg";
 
 const Services = () => {
   const serviceItem = [
-    { text: "Facial Treatments", image: Service1 },
-    { text: "Standard Haircuts", image: Service2 },
-    { text: "Hair Treatments", image: Service3 },
-    { text: "Styling", image: Service4 },
-    { text: "Body Treatments", image: Service5 },
-    { text: "Weddings", image: Service6 },
-    { text: "Hair Treatments", image: Service3 },
+    { id: 1, text: "Facial Treatments", image: Service1 },
+    { id: 2, text: "Standard Haircuts", image: Service2 },
+    { id: 3, text: "Hair Treatments", image: Service3 },
+    { id: 4, text: "Styling", image: Service4 },
+    { id: 5, text: "Body Treatments", image: Service5 },
+    { id: 6, text: "Weddings", image: Service6 },
+    { id: 7, text: "Foot Treatments", image: Service3 },
   ];
 
   return (
@@ -27,10 +27,10 @@ const Services = () => {
           </h2>
           {/* Service cards */}
           <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-            {serviceItem.map(({ text, image }, index) => {
+            {serviceItem.map(({ id, text, image }, index) => {
               return (
                 <div
-                  key={index}
+                  key={id}
                   className="group relative isolate flex flex-col justify-end items-center overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
                 >
                   <img
