@@ -111,13 +111,15 @@ const Review = () => {
 
   const handleNext = () => {
     if (index + ITEMS_PER_PAGE < reviews.length) {
-      setIndex(index + 3);
+      // setIndex(index + 3);
+      setIndex((prev) => prev + ITEMS_PER_PAGE);
     }
   };
 
   const handlePrev = () => {
     if (index > 0) {
-      setIndex(index - 3);
+      // setIndex(index - 3);
+      setIndex((prev) => prev - ITEMS_PER_PAGE);
     }
   };
 
