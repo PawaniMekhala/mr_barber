@@ -11,7 +11,7 @@ const reviews = [
     id: 1,
     name: "Dilan Perera",
     image: Gallery1,
-    rating: 5,
+    rating: 4,
     review:
       "I got a haircut and beard trim, and it was the best grooming experience I’ve had.",
   },
@@ -19,7 +19,7 @@ const reviews = [
     id: 2,
     name: "Samith Peries",
     image: Gallery2,
-    rating: 5,
+    rating: 3,
     review:
       "They genuinely care about customer satisfaction. Highly recommend!",
   },
@@ -35,7 +35,7 @@ const reviews = [
     id: 4,
     name: "Dilan Perera",
     image: Gallery1,
-    rating: 5,
+    rating: 2,
     review:
       "I got a haircut and beard trim, and it was the best grooming experience I’ve had.",
   },
@@ -43,7 +43,7 @@ const reviews = [
     id: 5,
     name: "Samith Peries",
     image: Gallery2,
-    rating: 5,
+    rating: 4,
     review:
       "They genuinely care about customer satisfaction. Highly recommend!",
   },
@@ -51,7 +51,7 @@ const reviews = [
     id: 6,
     name: "Amir John",
     image: Gallery3,
-    rating: 5,
+    rating: 2,
     review:
       "The combination of professionalism and style makes this barbershop stand out.",
   },
@@ -74,7 +74,7 @@ const reviews = [
     id: 9,
     name: "Amir John",
     image: Gallery3,
-    rating: 5,
+    rating: 1,
     review:
       "The combination of professionalism and style makes this barbershop stand out.",
   },
@@ -82,7 +82,7 @@ const reviews = [
     id: 10,
     name: "Dilan Perera",
     image: Gallery1,
-    rating: 5,
+    rating: 0,
     review: "I got a haircut and beard trim, and it was best.",
   },
   {
@@ -96,7 +96,7 @@ const reviews = [
     id: 12,
     name: "Amir John",
     image: Gallery3,
-    rating: 5,
+    rating: 3,
     review:
       "The combination of professionalism and style makes this barbershop stand out.",
   },
@@ -105,17 +105,21 @@ const reviews = [
 const Review = () => {
   const [index, setIndex] = useState(0); // starting index
   const [showForm, setShowForm] = useState(false);
-  const visibleReviews = reviews.slice(index, index + 3);
+  // const visibleReviews = reviews.slice(index, index + 3);
+  const ITEMS_PER_PAGE = 3;
+  const visibleReviews = reviews.slice(index, index + ITEMS_PER_PAGE);
 
   const handleNext = () => {
-    if (index + 3 < reviews.length) {
-      setIndex(index + 3);
+    if (index + ITEMS_PER_PAGE < reviews.length) {
+      // setIndex(index + 3);
+      setIndex((prev) => prev + ITEMS_PER_PAGE);
     }
   };
 
   const handlePrev = () => {
     if (index > 0) {
-      setIndex(index - 3);
+      // setIndex(index - 3);
+      setIndex((prev) => prev - ITEMS_PER_PAGE);
     }
   };
 
