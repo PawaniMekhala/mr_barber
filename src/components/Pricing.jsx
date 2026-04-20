@@ -114,7 +114,7 @@ const Pricing = () => {
               <div className="text-right">
                 <p className="text-sm text-gray-500">From</p>
                 <p className="text-lg font-bold text-gold-700">
-                  {service.price}
+                  {`Rs. ${service.price}`}
                 </p>
               </div>
             </div>
