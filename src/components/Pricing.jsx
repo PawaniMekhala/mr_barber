@@ -9,36 +9,42 @@ import Service6 from "../assets/services_img/service6.jpg";
 const Pricing = () => {
   const services = [
     {
+      id: 1,
       name: "Hair Cutting",
       price: "850/=",
       category: "Hair cutting",
       image: Service2,
     },
     {
+      id: 2,
       name: "Hair Treatments",
       price: "700/=",
       category: "Hair cutting",
       image: Service3,
     },
     {
+      id: 3,
       name: "Hair Styling",
       price: "1500/=",
       category: "Styling",
       image: Service4,
     },
     {
+      id: 4,
       name: "Facial Treatments",
       price: "1800/=",
       category: "Facial Treatment",
       image: Service1,
     },
     {
+      id: 5,
       name: "Wedding Plans",
       price: "2000/=",
       category: "Weddings",
       image: Service6,
     },
     {
+      id: 6,
       name: "Body Treatments",
       price: "1600/=",
       category: "Body Treatment",
