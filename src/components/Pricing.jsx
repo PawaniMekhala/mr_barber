@@ -97,7 +97,7 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto font-poppins grid grid-cols-2 sm:grid-cols-2 gap-8">
           {filteredServices.map((service, index) => (
             <div
-              key={index}
+              key={service.id}
               className="flex flex-col md:items-center md:flex-row justify-between bg-gray-100 border border-gray-200 shadow-md rounded-3xl p-5 space-x-8 transition-all duration-500 hover:border-gray-400"
             >
               {/* Service Image */}
