@@ -9,36 +9,42 @@ import Service6 from "../assets/services_img/service6.jpg";
 const Pricing = () => {
   const services = [
     {
+      id: 1,
       name: "Hair Cutting",
       price: "850/=",
       category: "Hair cutting",
       image: Service2,
     },
     {
+      id: 2,
       name: "Hair Treatments",
       price: "700/=",
       category: "Hair cutting",
       image: Service3,
     },
     {
+      id: 3,
       name: "Hair Styling",
       price: "1500/=",
       category: "Styling",
       image: Service4,
     },
     {
+      id: 4,
       name: "Facial Treatments",
       price: "1800/=",
       category: "Facial Treatment",
       image: Service1,
     },
     {
+      id: 5,
       name: "Wedding Plans",
       price: "2000/=",
       category: "Weddings",
       image: Service6,
     },
     {
+      id: 6,
       name: "Body Treatments",
       price: "1600/=",
       category: "Body Treatment",
@@ -91,7 +97,7 @@ const Pricing = () => {
         <div className="max-w-7xl mx-auto font-poppins grid grid-cols-2 sm:grid-cols-2 gap-8">
           {filteredServices.map((service, index) => (
             <div
-              key={index}
+              key={service.id}
               className="flex flex-col md:items-center md:flex-row justify-between bg-gray-100 border border-gray-200 shadow-md rounded-3xl p-5 space-x-8 transition-all duration-500 hover:border-gray-400"
             >
               {/* Service Image */}
@@ -108,7 +114,7 @@ const Pricing = () => {
               <div className="text-right">
                 <p className="text-sm text-gray-500">From</p>
                 <p className="text-lg font-bold text-gold-700">
-                  {service.price}
+                  {`Rs. ${service.price}`}
                 </p>
               </div>
             </div>
