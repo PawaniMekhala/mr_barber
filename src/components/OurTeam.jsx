@@ -7,6 +7,7 @@ import Owner from "../assets/images for saloon/owner.jpg";
 
 const staff = [
   {
+    id: 1,
     name: "T.B.Perera",
     image: Owner,
     position: "Founder",
@@ -14,30 +15,35 @@ const staff = [
       "The visionary behind our salon, setting the standards for excellence.",
   },
   {
+    id: 2,
     name: "Jerom Bell",
     image: Staff1,
     position: "Co-Founder",
     description: "Co-founder and creative mind leading the design team.",
   },
   {
+    id: 3,
     name: "Yasmine Tano",
     image: Staff2,
     position: "Chairman",
     description: "Focused on vision, leadership, and growth.",
   },
   {
+    id: 4,
     name: "Martin Darbys",
     image: Staff3,
     position: "CEO",
     description: "Leads with passion and commitment to perfection.",
   },
   {
+    id: 5,
     name: "Patrick Angely",
     image: Staff4,
     position: "Product Manager",
     description: "Ensures quality in every product we deliver.",
   },
   {
+    id: 6,
     name: "Jerom Bell",
     image: Staff1,
     position: "Co-Founder",
