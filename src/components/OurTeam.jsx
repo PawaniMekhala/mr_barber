@@ -61,15 +61,15 @@ const OurTeam = () => {
         </h2>
         <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
           {/* Team members */}
-          {staff.map(({ name, position, description, image }, index) => {
+          {staff.map(({ id, name, position, description, image }, index) => {
             return (
               <div
-                key={index}
+                key={id}
                 className="group relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 dark:bg-gray-700 px-8 py-8 pb-8 pt-80 transition-transform duration-300 ease-in-out hover:-translate-y-2"
               >
                 <img
                   src={image}
-                  alt={name}
+                  alt={`${name} - ${position}`}
                   className="absolute inset-0 -z-10 h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
                 />
                 {/* Dark overlay on hover */}
