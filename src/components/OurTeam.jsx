@@ -5,47 +5,47 @@ import Staff3 from "../assets/staff_img/stf3.jpg";
 import Staff4 from "../assets/staff_img/stf4.jpg";
 import Owner from "../assets/images for saloon/owner.jpg";
 
-const OurTeam = () => {
-  const staff = [
-    {
-      name: "T.B.Perera",
-      image: Owner,
-      position: "Founder",
-      description:
-        "The visionary behind our salon, setting the standards for excellence.",
-    },
-    {
-      name: "Jerom Bell",
-      image: Staff1,
-      position: "Co-Founder",
-      description: "Co-founder and creative mind leading the design team.",
-    },
-    {
-      name: "Yasmine Tano",
-      image: Staff2,
-      position: "Chairman",
-      description: "Focused on vision, leadership, and growth.",
-    },
-    {
-      name: "Martin Darbys",
-      image: Staff3,
-      position: "CEO",
-      description: "Leads with passion and commitment to perfection.",
-    },
-    {
-      name: "Patrick Angely",
-      image: Staff4,
-      position: "Product Manager",
-      description: "Ensures quality in every product we deliver.",
-    },
-    {
-      name: "Jerom Bell",
-      image: Staff1,
-      position: "Co-Founder",
-      description: "Dedicated to modern trends and unique designs.",
-    },
-  ];
+const staff = [
+  {
+    name: "T.B.Perera",
+    image: Owner,
+    position: "Founder",
+    description:
+      "The visionary behind our salon, setting the standards for excellence.",
+  },
+  {
+    name: "Jerom Bell",
+    image: Staff1,
+    position: "Co-Founder",
+    description: "Co-founder and creative mind leading the design team.",
+  },
+  {
+    name: "Yasmine Tano",
+    image: Staff2,
+    position: "Chairman",
+    description: "Focused on vision, leadership, and growth.",
+  },
+  {
+    name: "Martin Darbys",
+    image: Staff3,
+    position: "CEO",
+    description: "Leads with passion and commitment to perfection.",
+  },
+  {
+    name: "Patrick Angely",
+    image: Staff4,
+    position: "Product Manager",
+    description: "Ensures quality in every product we deliver.",
+  },
+  {
+    name: "Jerom Bell",
+    image: Staff1,
+    position: "Co-Founder",
+    description: "Dedicated to modern trends and unique designs.",
+  },
+];
 
+const OurTeam = () => {
   return (
     <section id="team" className="py-24 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
