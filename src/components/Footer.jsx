@@ -5,6 +5,14 @@ import { FiInstagram } from "react-icons/fi";
 import { FaMapMarkerAlt, FaPhoneAlt, FaRegClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+const discoverLinks = [
+  "Our Services",
+  "Meet Our Team",
+  "Make an Appointment",
+  "Need a Career?",
+  "News & Blogs",
+];
+
 const Footer = () => {
   return (
     <footer className="bg-white font-poppins py-10 border-t">
@@ -32,17 +40,13 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-gold-700 mb-4">Discover</h3>
           <ul className="text-gray-600 space-y-2">
-            <li className="hover:text-gold-600 cursor-pointer">Our Services</li>
-            <li className="hover:text-gold-600 cursor-pointer">
-              Meet Our Team
-            </li>
-            <li className="hover:text-gold-600 cursor-pointer">
-              Make an Appointment
-            </li>
-            <li className="hover:text-gold-600 cursor-pointer">
-              Need a Career?
-            </li>
-            <li className="hover:text-gold-600 cursor-pointer">News & Blogs</li>
+            {discoverLinks.map((item) => (
+              <li key={item}>
+                <a href={item.link} className="hover:text-gold-600 transition">
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
