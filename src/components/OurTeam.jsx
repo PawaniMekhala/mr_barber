@@ -26,7 +26,7 @@ const staff = [
     name: "Yasmine Tano",
     image: Staff2,
     position: "Chairman",
-    description: "Focused on vision, leadership, and growth.",
+    // description: "Focused on vision, leadership, and growth.",
   },
   {
     id: 4,
