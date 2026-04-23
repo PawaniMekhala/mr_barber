@@ -58,7 +58,7 @@ const Pricing = () => {
     "Facial Treatment",
     "Styling",
     "Body Treatment",
-    "Weddings",
+    // "Weddings",
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All Pricing");
