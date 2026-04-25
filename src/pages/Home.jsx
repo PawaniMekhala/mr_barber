@@ -141,14 +141,12 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row flex-wrap justify-between items-center border border-gold-700 rounded-lg px-6 py-4 gap-4 text-center sm:text-left text-white font-poppins font-medium text-lg transition-colors duration-300 hover:bg-gold-700 hover:text-black">
             {/* Call */}
             <div className="flex items-center gap-2">
-              {/* <i className="fa-brands fa-whatsapp text-xl"></i> */}
               <FaWhatsapp className="text-xl" />
               <span>Call Us : +94 782637487</span>
             </div>
 
             {/* Opening Hours */}
             <div className="flex items-center gap-2">
-              {/* <i className="fa-regular fa-calendar-days text-xl"></i> */}
               <FaRegCalendarAlt className="text-xl" />
               <span>Opening Hours : Sunday – Friday, 08 a.m – 09 p.m</span>
             </div>
