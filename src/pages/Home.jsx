@@ -57,7 +57,7 @@ const Home = () => {
               {/* Big img*/}
               <div
                 className="relative rounded-full overflow-hidden float-main ring-blend w-48 sm:w-56 md:w-64 lg:w-72 aspect-square mx-auto lg:mx-0"
-                aria-hidden="true"
+                // aria-hidden="true"
               >
                 <img
                   src={Home1}
@@ -82,7 +82,7 @@ const Home = () => {
                 {/* small top */}
                 <div
                   className="relative rounded-full overflow-hidden float-small ring-blend w-28 sm:w-36 lg:w-44 aspect-square"
-                  aria-hidden="true"
+                  // aria-hidden="true"
                 >
                   <img
                     src={Home2}
@@ -104,7 +104,7 @@ const Home = () => {
                 {/* small bottom */}
                 <div
                   className="relative rounded-full overflow-hidden ring-blend float-small2 w-20 sm:w-28 lg:w-32 aspect-square"
-                  aria-hidden="true"
+                  // aria-hidden="true"
                 >
                   <img
                     src={Home3}
