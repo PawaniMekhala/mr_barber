@@ -2,6 +2,8 @@ import React from "react";
 import Home1 from "../assets/home_img/home1.jpg";
 import Home2 from "../assets/home_img/home2.jpg";
 import Home3 from "../assets/home_img/home3.jpg";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaRegCalendarAlt } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -139,13 +141,15 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row flex-wrap justify-between items-center border border-gold-700 rounded-lg px-6 py-4 gap-4 text-center sm:text-left text-white font-poppins font-medium text-lg transition-colors duration-300 hover:bg-gold-700 hover:text-black">
             {/* Call */}
             <div className="flex items-center gap-2">
-              <i className="fa-brands fa-whatsapp text-xl"></i>
+              {/* <i className="fa-brands fa-whatsapp text-xl"></i> */}
+              <FaWhatsapp className="text-xl" />
               <span>Call Us : +94 782637487</span>
             </div>
 
             {/* Opening Hours */}
             <div className="flex items-center gap-2">
-              <i className="fa-regular fa-calendar-days text-xl"></i>
+              {/* <i className="fa-regular fa-calendar-days text-xl"></i> */}
+              <FaRegCalendarAlt className="text-xl" />
               <span>Opening Hours : Sunday – Friday, 08 a.m – 09 p.m</span>
             </div>
           </div>
