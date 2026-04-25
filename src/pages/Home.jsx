@@ -64,7 +64,6 @@ const Home = () => {
                   alt="Barber trimming a customer's hair"
                   loading="eager"
                   className="w-full h-full object-cover block"
-                  style={{ width: "100%", height: "100%" }}
                 />
                 {/* golden 3/4 ring */}
                 <div
