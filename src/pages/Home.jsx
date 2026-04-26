@@ -67,14 +67,14 @@ const Home = () => {
                 />
                 {/* golden 3/4 ring */}
                 <div
-                  className="absolute inset-0 rounded-full pointer-events-none"
-                  style={{
-                    border: "4px solid rgba(202,166,25,0.95)",
-                    borderTopColor: "transparent",
-                    borderLeftColor: "transparent",
-                    boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
-                    transform: "rotate(90deg)",
-                  }}
+                  className="absolute inset-0 rounded-full pointer-events-none gold-ring"
+                  // style={{
+                  //   border: "4px solid rgba(202,166,25,0.95)",
+                  //   borderTopColor: "transparent",
+                  //   borderLeftColor: "transparent",
+                  //   boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+                  //   transform: "rotate(90deg)",
+                  // }}
                 />
               </div>
 
@@ -91,13 +91,13 @@ const Home = () => {
                     className="w-full h-full object-cover block"
                   />
                   <div
-                    className="absolute inset-0 rounded-full pointer-events-none"
-                    style={{
-                      border: "3px solid rgba(202,166,25,0.95)",
-                      borderTopColor: "transparent",
-                      borderLeftColor: "transparent",
-                      transform: "rotate(90deg)",
-                    }}
+                    className="absolute inset-0 rounded-full pointer-events-none gold-ring"
+                    // style={{
+                    //   border: "3px solid rgba(202,166,25,0.95)",
+                    //   borderTopColor: "transparent",
+                    //   borderLeftColor: "transparent",
+                    //   transform: "rotate(90deg)",
+                    // }}
                   />
                 </div>
 
@@ -113,13 +113,13 @@ const Home = () => {
                     className="w-full h-full object-cover block"
                   />
                   <div
-                    className="absolute inset-0 rounded-full pointer-events-none"
-                    style={{
-                      border: "3px solid rgba(202,166,25,0.95)",
-                      borderTopColor: "transparent",
-                      borderLeftColor: "transparent",
-                      transform: "rotate(90deg)",
-                    }}
+                    className="absolute inset-0 rounded-full pointer-events-none gold-ring"
+                    // style={{
+                    //   border: "3px solid rgba(202,166,25,0.95)",
+                    //   borderTopColor: "transparent",
+                    //   borderLeftColor: "transparent",
+                    //   transform: "rotate(90deg)",
+                    // }}
                   />
                 </div>
               </div>
