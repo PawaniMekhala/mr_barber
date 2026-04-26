@@ -20,6 +20,13 @@
  
 }
 
+.gold-ring {
+  border: 3px solid rgba(202,166,25,0.95);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(90deg);
+}
+
 
 input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
