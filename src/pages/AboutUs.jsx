@@ -1,5 +1,5 @@
 import React from "react";
-import Owner from "../assets/images for saloon/owner.jpg";
+import Owner from "../assets/images_for_saloon/owner.jpg";
 
 const AboutUs = () => {
   return (

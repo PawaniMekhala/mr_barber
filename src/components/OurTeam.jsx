@@ -3,7 +3,7 @@ import Staff1 from "../assets/staff_img/stf1.jpg";
 import Staff2 from "../assets/staff_img/stf2.jpg";
 import Staff3 from "../assets/staff_img/stf3.jpg";
 import Staff4 from "../assets/staff_img/stf4.jpg";
-import Owner from "../assets/images for saloon/owner.jpg";
+import Owner from "../assets/images_for_saloon/owner.jpg";
 
 const staff = [
   {
