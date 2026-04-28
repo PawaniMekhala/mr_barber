@@ -27,7 +27,7 @@ const AboutUs = () => {
           </div>
           <div>
             <img
-              className="w-full max-w-md mx-auto lg:mx-0 rounded-3xl object-cover"
+              className="w-full max-w-md mx-auto lg:mx-0 rounded-3xl object-cover shadow-lg"
               // className="lg:mx-0 mx-auto h-full rounded-3xl object-cover shadow-xl shadow-blue-gray-600"
               src={Owner}
               alt="Owner of Mr. Barber salon"
