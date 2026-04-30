@@ -6,7 +6,7 @@ import Service4 from "../assets/services_img/service4.webp";
 import Service5 from "../assets/services_img/service5.webp";
 import Service6 from "../assets/services_img/service6.jpg";
 
-const services = [
+const serviceItem = [
   { id: 1, text: "Facial Treatments", image: Service1 },
   { id: 2, text: "Standard Haircuts", image: Service2 },
   { id: 3, text: "Hair Treatments", image: Service3 },
@@ -26,7 +26,7 @@ const Services = () => {
         </h2>
         {/* Service cards */}
         <div className="mx-auto mt-8 grid font-poppins max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-          {services.map(({ id, text, image }) => {
+          {serviceItem.map(({ id, text, image }) => {
             return (
               <div
                 key={id}
