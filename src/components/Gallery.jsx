@@ -6,6 +6,7 @@ import Gallery4 from "../assets/galary_img/gallery4.jpg";
 import Gallery5 from "../assets/galary_img/gallery5.jpg";
 import Gallery6 from "../assets/galary_img/gallery6.jpg";
 import Gallery7 from "../assets/galary_img/gallery7.jpg";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const Gallery = () => {
   const galleryItem = [
@@ -24,7 +25,7 @@ const Gallery = () => {
 
   const handlePrev = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + galleryItem.length) % galleryItem.length
+      (prevIndex) => (prevIndex - 1 + galleryItem.length) % galleryItem.length,
     );
   };
 
@@ -34,7 +35,7 @@ const Gallery = () => {
 
   const visibleImages = Array.from(
     { length: visibleCount },
-    (_, i) => galleryItem[(currentIndex + i) % galleryItem.length]
+    (_, i) => galleryItem[(currentIndex + i) % galleryItem.length],
   );
 
   return (
@@ -53,7 +54,9 @@ const Gallery = () => {
             onClick={handlePrev}
             className="absolute left-6 top-1/2 -translate-y-1/2 z-10 bg-gold-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gold-700 transition"
           >
-            ❮
+            {/* ❮  */}
+
+            <MdKeyboardArrowLeft />
           </button>
 
           {/* Image Grid */}
@@ -77,7 +80,8 @@ const Gallery = () => {
             onClick={handleNext}
             className="absolute right-6 top-1/2 -translate-y-1/2 z-10 bg-gold-700 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-gold-700 transition"
           >
-            ❯
+            {/* ❯ */}
+            <MdKeyboardArrowRight />
           </button>
         </div>
       </div>
