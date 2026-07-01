@@ -3,7 +3,7 @@ import Home1 from "../assets/home_img/home1.jpg";
 import Home2 from "../assets/home_img/home2.jpg";
 import Home3 from "../assets/home_img/home3.jpg";
 import { FaWhatsapp } from "react-icons/fa";
-import { FaRegCalendarAlt } from "react-icons/fa";
+import { FaRegCalendarAlt, FaMinus } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -145,9 +145,19 @@ const Home = () => {
             </div>
 
             {/* Opening Hours */}
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <FaRegCalendarAlt className="text-xl" />
               <span>Opening Hours : Sunday – Friday, 08 a.m – 09 p.m</span>
+            </div> */}
+
+            <div className="flex items-center gap-2">
+              <FaRegCalendarAlt className="text-xl" />
+              <span>Opening Hours :</span>
+              <span>Sunday</span>
+              <FaMinus className="text-xs" />
+              <span>Friday, 08 a.m</span>
+              <FaMinus className="text-xs" />
+              <span>09 p.m</span>
             </div>
           </div>
         </div>
